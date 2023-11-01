@@ -1,0 +1,343 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "footer": {
+    "promotionFooter": "Get 10% discount on your next project! Subscribe to our newsletter."
+  },
+  "home": {
+    "welcomeMessage": "Designing Dreams, <br/>Delivering results.",
+    "ourMission": "We are an agency in Waterloo, ON dedicated to developing and designing websites for emerging and mid-market businesses. Our mission is to deliver dynamic websites with attractive and intuitive mechanics that generate an impact on the future of the business of each of our clients.",
+    "whyUs": {
+      "title": "Why choose us?",
+      "reasonOneTitle": "Expand Horizons: Captivating Design",
+      "reasonOneDescription": "A website extends the horizons of a business and increasing the number of people who have access to your product. Our team will take care of extending those horizons by presenting an outstanding and eye-catching effect.",
+      "reasonTwoTitle": "Revolutionize Appeal: Dynamic Presentation",
+      "reasonTwoDescription": "Refrain from just showing your product or service. Discover revolutionary ways to present it to make it more attractive to customers. Our team will be in charge of generating a much more striking image for customers.",
+      "reasonThreeTitle": "Convert Leads: Trusted Dynamic Design",
+      "reasonThreeDescription": "Make your website dynamics convert your leads into paying customers. Our team will give your website an attractive design and be equipped with mechanics that will provide confidence and professionalism when navigating it.",
+      "reasonFourTitle": "Taiolored Excellence: Unique Websites",
+      "reasonFourDescription": "Don't worry about your niche market, as our team is flexible and able to adapt to different needs, creating unique and customized websites that are attractive no matter the business."
+    },
+    "services": {
+      "title": "Our services",
+      "tableHeaderOne": "TYPE",
+      "tableHeaderTwo": "DESCRIPTION"
+    },
+    "projects": {
+      "title": "Our projects"
+    },
+    "contact": {
+      "title": "Let's<br/>design,<br/>let's<br/>deliver.",
+      "formTitle": "What can we do for you?"
+    }
+  },
+  "services": {
+    "welcomeMessage": "We believe in your success: Unveiling our brand empowerment services",
+    "stats": {
+      "statOne": "97% of consumers search for local businesses online. <span class='orangeText'>Having a website ensures your business is discoverable.</span>",
+      "statTwo": "Small businesses that have an online presence and a website <span class='orangeText'>grow 40% faster</span> than those that don't.",
+      "statThree": "Websites <span class='orangeText'>generate 3 times more leads and sales</span> than traditional methods."
+    },
+    "options": {
+      "service1": {
+        "title": "Web Design and Development",
+        "subtitle": "UX/UI Design Services",
+        "shortDescription": "Your website is the face of your business in the digital world. Our talented team of designers and developers create visually stunning, user-friendly websites that leave a lasting impression on your audience. <i class='orangeText'>With a focus on responsive design and seamless functionality, we ensure your online presence stands out.</i>",
+        "description": "Our Web Design and Development service is the cornerstone of crafting captivating digital identities for businesses across diverse industries. We don't just create websites; we engineer them to deliver results. Our team of skilled designers and developers collaborates closely with you to understand your vision and objectives, ensuring that every pixel and line of code serves a purpose. Whether you need a stunning website from scratch or want to revamp your existing online presence, our experts will turn your ideas into a visually striking, user-friendly, and high-performing digital platform that engages your audience and drives conversions"
+      },
+      "service2": {
+        "title": "Search Engine Optimization (SEO)",
+        "subtitle": "",
+        "shortDescription": "Unlock the true potential of organic search traffic with our data-driven SEO strategies. <i class='orangeText'>We utilize the latest tools and industry insights to optimize your website's ranking on search engines, driving a steady stream of targeted traffic to your site.</i>",
+        "description": "In the vast digital landscape, visibility is key to success. Our Search Engine Optimization (SEO) service is designed to propel your brand to the forefront of search engine results, ensuring that potential customers find you before your competitors. With a deep understanding of search engine algorithms and the latest industry trends, our SEO experts employ proven strategies to optimize your website's ranking and enhance its online authority. We meticulously analyze keywords, optimize on-page elements, and build high-quality backlinks to boost your organic traffic and increase your online presence. With our SEO expertise, your business can gain the online visibility it deserves, driving more qualified traffic and ultimately, greater revenue."
+      },
+      "service3": {
+        "title": "Email marketing",
+        "subtitle": "",
+        "shortDescription": "Leverage the power of email campaigns to nurture leads and maintain customer relationships. <i class='orangeText'>Our team of experts will help you create and execute email marketing strategies that drive conversions and increase revenue.</i>",
+        "description": "Harness the power of personalized communication and engagement with our Email Marketing service. At our digital agency, we recognize that email remains one of the most effective tools for building relationships with your audience and driving conversions. Our experienced email marketers craft compelling, tailor-made campaigns that resonate with your target audience. We segment your email list to ensure the right message reaches the right people at the right time, increasing open rates and click-through rates. From eye-catching designs to persuasive copy, we ensure every email we send represents your brand's values and goals. With our Email Marketing service, you can nurture leads, retain customers, and achieve a significant return on investment while building lasting connections with your audience."
+      }
+    }
+  },
+  "projects": {
+    "welcomeMessage": {
+      "one": "Dream,",
+      "two": "Design,",
+      "three": "Deliver,",
+      "text": "We take pride in every collaboration, using statistics and analytics as our guiding beacons to navigate the ever-evolving digital landscape."
+    }
+  },
+  "studyCases": {
+    "projects": {
+      "project1": {
+        "id": 1,
+        "completed": true,
+        "info": {
+          "link": "amazing-pet-grooming",
+          "title": "Amazing Pet Grooming",
+          "place": "Canada",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_grooming.png",
+        "mockupImages": {
+          "big": "/images/mockupBigGrooming.png",
+          "mid": "/images/mockupMidGrooming.png",
+          "sm": "/images/mockupSmGrooming.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-grooming.png",
+          "meet": "AmazingPetGrooming, a family-owned business devoted to animal welfare. With branches in Hamilton and Cambridge, Ontario, they offer top-tier care for cats and dogs of all breeds and sizes. The experienced team provides tailored grooming services, ensuring your pet comfort and happiness. From soothing baths to precise trims, the team prioritize your pet well-being, aiming to enhance their health and appearance. Experience their dedicated approach to pet grooming by scheduling an appointment at either location and witnessing the positive impact on your furry companions lives.",
+          "background": "In Canada, a country known for its extreme temperature changes and variations in sunlight exposure, people often experience mood swings that can make mental health somewhat fragile. As a result, individuals turn to different methods to address this issue, with the companionship of a pet proving to be one of the most effective ways to tackle this problem. Just as they care for our mental well-being with loyalty and love, we must provide them with the appropriate care to keep them clean and happy. This feeling of owing is where the concept of AmazingPetGrooming for pet care was born, offering personalized and top-quality services in response to this need.",
+          "development": [
+            {
+              "image": "/images/changes_grooming.png",
+              "title": "Organization and Changes",
+              "description": "The development of Amazing Pet Grooming was built upon an existing webpage, which could be referred to as version 1.0. However, it needed more dynamism and contained many repetitive and unappealing designs for both leads and customers. This previous situation led to a complete page redesign, focusing on animations, organization, selection menus, and overall visual content."
+            },
+            {
+              "image": "/images/booking_process.gif",
+              "title": "Booking Process",
+              "description": "For the booking process, whether it's for a cat or a dog, you will be presented with various services for your pet, ranging from care like hair cutting to a spa day. Once you choose the desired service, you will be asked for additional information, such as your preferred location and the type of package you'd like. In the case of a dog, you will be prompted to indicate its size based on the provided 3D models, ranging from S to XL. After completing these steps, you will have the option to choose a specific member of Amazing Pet Grooming. Next, a confirmation screen will appear, and a calendar will be displayed to finalize the booking. At that point, your appointment will be set, ensuring that your pet receives the best possible care."
+            }
+          ],
+          "challenges": "Developing this project not only allowed us to connect with our pets and appreciate the excellent care provided to them, but also incorporates innovative design techniques. These techniques include the use of 3D elements to offer users a more comprehensive and interactive guide. Furthermore, multiple features have been integrated, such as maps.",
+          "figmaDesigns": ["/images/figmaDesktopGrooming.png"],
+          "designSystem": {
+            "typography": [
+              { "heading": "H1 heavy", "desktop": "171px", "mobile": "80px" },
+              { "heading": "H2 heavy", "desktop": "80px", "mobile": "60px" },
+              { "heading": "H3 heavy", "desktop": "50px", "mobile": "40px" },
+              { "heading": "H4 medium", "desktop": "45px", "mobile": "30px" },
+              { "heading": "H5 regular", "desktop": "36px", "mobile": "24px" },
+              { "heading": "p regular", "desktop": "16px", "mobile": "16px" }
+            ],
+            "colors": [
+              { "name": "Primary", "hex": "#65BFF8" },
+              { "name": "Secondary", "hex": "#DDF2FF" },
+              { "name": "White", "hex": "#FFFFFF" },
+              { "name": "Black", "hex": "#2A2A2A" },
+              { "name": "Gray", "hex": "#949494" },
+              { "name": "Purple", "hex": "#7B1DF4" },
+              { "name": "Pink", "hex": "#DF2C7C" },
+              { "name": "Blue", "hex": "#3977EC" }
+            ]
+          }
+        }
+      },
+      "project2": {
+        "id": 2,
+        "completed": true,
+        "info": {
+          "link": "pago-tienda",
+          "title": "Pago Tienda",
+          "place": "Argentina",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_pago_tienda.png",
+        "mockupImages": {
+          "big": "/images/mockupBigPago.png",
+          "mid": "/images/mockupMidPago.png",
+          "sm": "/images/mockupSmPago.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-pago.png",
+          "meet": "Pago Tienda is a web page where business partners exhibit and market their products or services so customers can purchase them. Pago Tienda Integrates the cryptocurrency payment method that is currently relatively recent and innovative in Argentina.",
+          "background": "In a market that is expanding in large proportions, not only in the Argentine region, it is vital to access the most significant number of products or services quickly and easily. In the case of Argentina, due to its current economic situation, which is not favorable at all, the local currency has been devalued abysmally. This event has caused the inhabitants of this country to be forced to resort to different ways of preserving liquidity, such as dollars or cryptocurrencies. This situation has motivated the Pago Tienda team to design an online store with payment options like cryptocurrencies.",
+          "development": [
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Registration processes",
+              "description": "During the registration process, new users will be asked for information such as their email address, name, and preferred addresses for frequent locations, and finally, the user will be asked to use the pre-designed cryptocurrency wallet to facilitate future payments."
+            },
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Organization and features",
+              "description": "Pago Tienda was developed in different phases. The first was to study the popularity of cryptocurrencies in the region. During the second phase, establishments and businesses willing to accept cryptocurrency payments were sought. The third phase was to design the web page and the fourth phase was to develop the web page."
+            },
+            {
+              "image": "/images/development3-pago.png",
+              "title": "Purchase processes",
+              "description": "Once you have selected all the products you want, there will be a section called the cart, the section to make payment for your purchase. You will be asked for certain information such as delivery address and customer name. For payment, in this case, with the integrated method of payment with cryptocurrencies that are linked to the wallet developed to make the purchase process more accessible, a deposit of the crypto with which you decide to pay will be made, and now you just have to wait and enjoy your order."
+            }
+          ],
+          "challenges": "During the development, we gained experience in designing and creating e-commerce type online stores, including their respective sections, shopping carts, and product categorization. An additional challenge for this case was integrating PagoLinea with PagoTienda, a solution designed to streamline the purchasing process.",
+          "figmaDesigns": [
+            "/images/figmaDesktopPago.png",
+            "/images/figmaMobilePago.png"
+          ],
+          "designSystem": {
+            "typography": [
+              { "heading": "H1 bold", "desktop": "64px", "mobile": "32px" },
+              { "heading": "H2 bold", "desktop": "48px", "mobile": "24px" },
+              { "heading": "H3 bold", "desktop": "32px", "mobile": "22px" },
+              { "heading": "H5 medium", "desktop": "22px", "mobile": "20px" },
+              { "heading": "P regular", "desktop": "16px", "mobile": "14px" }
+            ],
+            "colors": [
+              { "name": "Primary", "hex": "#960FCC" },
+              { "name": "Secondary", "hex": "#F7EEFB" },
+              { "name": "White", "hex": "#FFFFFF" },
+              { "name": "Black", "hex": "#3E3E3E" },
+              { "name": "Dark blue", "hex": "#28292C" },
+              { "name": "Gray", "hex": "#828385" },
+              { "name": "Light gray", "hex": "#B0B0B0" },
+              { "name": "Main gradient", "hex": "#640A88" }
+            ]
+          }
+        }
+      },
+      "project3": {
+        "id": 3,
+        "completed": false,
+        "info": {
+          "link": "pago-tienda",
+          "title": "UnitradeFX",
+          "place": "Argentina",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_copy.png",
+        "mockupImages": {
+          "big": "/images/mockupBigPago.png",
+          "mid": "/images/mockupMidPago.png",
+          "sm": "/images/mockupSmPago.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-pago.png",
+          "meet": "Pago Tienda is a web page where business partners exhibit and market their products or services so customers can purchase them. Pago Tienda Integrates the cryptocurrency payment method that is currently relatively recent and innovative in Argentina.",
+          "background": "In a market that is expanding in large proportions, not only in the Argentine region, it is vital to access the most significant number of products or services quickly and easily. In the case of Argentina, due to its current economic situation, which is not favorable at all, the local currency has been devalued abysmally. This event has caused the inhabitants of this country to be forced to resort to different ways of preserving liquidity, such as dollars or cryptocurrencies. This situation has motivated the Pago Tienda team to design an online store with payment options like cryptocurrencies.",
+          "development": [
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Registration processes.",
+              "description": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations."
+            },
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Organization and features.",
+              "description": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations."
+            },
+            {
+              "image": "/images/development3-pago.png",
+              "title": "Purchase processes.",
+              "description": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations."
+            }
+          ],
+          "challenges": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations.",
+          "figmaDesigns": [
+            "/images/figmaDesktopPago.png",
+            "/images/figmaMobilePago.png"
+          ],
+          "designSystem": {
+            "typography": [
+              { "heading": "H1 bold", "desktop": "64px", "mobile": "32px" },
+              { "heading": "H2 bold", "desktop": "48px", "mobile": "24px" },
+              { "heading": "H3 bold", "desktop": "32px", "mobile": "22px" },
+              { "heading": "H5 medium", "desktop": "22px", "mobile": "20px" },
+              { "heading": "P regular", "desktop": "16px", "mobile": "14px" }
+            ],
+            "colors": [
+              { "name": "Primary", "hex": "#960FCC" },
+              { "name": "Secondary", "hex": "#F7EEFB" },
+              { "name": "White", "hex": "#FFFFFF" },
+              { "name": "Black", "hex": "#3E3E3E" },
+              { "name": "Dark blue", "hex": "#28292C" },
+              { "name": "Gray", "hex": "#828385" },
+              { "name": "Light gray", "hex": "#B0B0B0" },
+              { "name": "Main gradient", "hex": "#640A88" }
+            ]
+          }
+        }
+      }
+    },
+    "text": {
+      "context": {
+        "title": "Some<br/>Context",
+        "team": "Meet the team",
+        "background": "Background"
+      },
+      "development": {
+        "title": "Development"
+      },
+      "designSystem": {
+        "title": "Style<br/>Guide",
+        "table": {
+          "typography": {
+            "title": "Typography",
+            "heading": "Heading",
+            "desktop": "Desktop",
+            "mobile": "Mobile"
+          },
+          "colors": "Colors palette"
+        }
+      }
+    }
+  },
+  "about": {
+    "welcomeMessage": "We live and breathe design, innovation, and the thrill of helping businesses grow.",
+    "title": "Our processes",
+    "processes": [
+      {
+        "title": "Strategy",
+        "description": "We kickstart every project with a data-driven strategy that sets the foundation for your success. Our team dives deep into market insights, customer behavior, and industry trends to craft a tailored plan that aligns with your goals."
+      },
+      {
+        "title": "Design",
+        "description": "Our design wizards bring imagination to life, conjuring captivating visuals that leave a lasting impression. From sleek interfaces to stunning graphics, we create an enchanting user experience that keeps visitors spellbound."
+      },
+      {
+        "title": "Development",
+        "description": "Our development sorcerers work their magic, transforming design into functional reality. With cutting-edge technology and meticulous attention to detail, we weave a seamless web of code that powers your website's performance."
+      }
+    ]
+  },
+  "contact": {
+    "welcomeMessage": "Let's<br/><i>design,</i><br/>let's<br/><i>deliver.</i>",
+    "formTitle": "What can we do for you?",
+    "placeholder": {
+      "name": "Type your name",
+      "email": "Type your email",
+      "message": "What's on your mind?"
+    }
+  },
+  "button": {
+    "send": "Send",
+    "becomeClient": "Become a client",
+    "visitSite": "Visit site"
+  },
+  "seo": {
+    "home": {
+      "title": "Samacle - Web Agency in Canada",
+      "metaDescription": "Samacle - Web Agency in Canada: Elevating Businesses with Dynamic Web Solutions."
+    },
+    "about": {
+      "title": "Samacle - About Us",
+      "metaDescription": "Samacle - About Us: Top Web Agency in Canada | We live and breathe design, innovation, and the thrill of helping businesses grow."
+    },
+    "services": {
+      "title": "Samacle - Our Services",
+      "metaDescription": "Samacle - Our Services: Explore our full suite of web services in Canada, including web design, development, SEO, e-commerce solutions, and more. Our dedicated team is committed to helping your business thrive online. Discover how we can tailor our expertise to meet your unique needs. Partner with us for your digital journey today."
+    },
+    "projects": {
+      "title": "Samacle - Our Projects",
+      "metaDescription": "Samacle - Our Projects: Unlock the Power of Web Design & Development | Canadian Web Agency."
+    },
+    "contact": {
+      "title": "Samacle - Contact Us",
+      "metaDescription": "Samacle - Contact Us: Reach Out to Your Trusted Web Agency in Canada."
+    },
+    "studyCases": {
+      "metaDescription": "Discover the strategies, challenges, and solutions that led to success, demonstrating our commitment to delivering impactful solutions for our clients."
+    }
+  }
+}

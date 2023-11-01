@@ -1,0 +1,480 @@
+{
+  "nav": {
+    "home": "Inico",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "projects": "Projectos"
+  },
+  "footer": {
+    "promotionFooter": "Obtenga un 10% de descuento en su próximo proyecto Suscríbete a nuestro boletín."
+  },
+  "home": {
+    "welcomeMessage": "Diseñando sueños \nEntregando resutados.",
+    "ourMission": "Somos una agencia ubicada en Waterloo, ON dedicada al desarrollo y diseño de sitios web para empresas emergentes y de tamaño medio. Nuestra misión es entregar sitios web dinámicos con mecánicas atractivas e intuitivas que generen un impacto en el futuro del negocio de cada uno de nuestros clientes.",
+    "whyUs": {
+      "title": "¿Por qué elegirnos?",
+      "reasonOneTitle": "Ampliar horizontes: Diseño cautivador",
+      "reasonOneDescription": "Un sitio web amplía los horizontes de una empresa y aumenta el número de personas que tienen acceso a su producto. Nuestro equipo se encargará de ampliar esos horizontes presentando un efecto destacado y llamativo.",
+      "reasonTwoTitle": "Revolucionar el atractivo: Presentación dinámica",
+      "reasonTwoDescription": "Absténgase de solamente mostrar su producto o servicio. Descubra formas revolucionarias de presentarlo para hacerlo más atractivo a los clientes. Nuestro equipo se encargará de generar una imagen mucho más llamativa para los clientes.",
+      "reasonThreeTitle": "Convertir clientes potenciales: Diseño dinámico de confianza",
+      "reasonThreeDescription": "Haz que la dinámica de tu web convierta tus leads en clientes de pago. Nuestro equipo dotará a tu web de un diseño atractivo y estará dotada de mecánicas que aportarán confianza y profesionalidad a la hora de navegar por ella.",
+      "reasonFourTitle": "Excelencia a medida: Sitios web únicos",
+      "reasonFourDescription": "No se preocupe por su nicho de mercado, ya que nuestro equipo es flexible y capaz de adaptarse a diferentes necesidades, creando sitios web únicos y personalizados que resultan atractivos independientemente del negocio."
+    },
+    "services": {
+      "title": "Nuestros servicios",
+      "tableHeaderOne": "TIPO",
+      "tableHeaderTwo": "DESCRIPCION"
+    },
+    "projects": {
+      "title": "Nuestros proyetos"
+    },
+    "contact": {
+      "title": "Diseñemos,<br/>entreguemos.",
+      "formTitle": "¿Qué podemos hacer por usted?"
+    }
+  },
+  "services": {
+    "welcomeMessage": "Creemos en su éxito: Presentamos nuestros servicios de potenciación de marca",
+    "stats": {
+      "statOne": "El 97% de los consumidores buscan empresas locales en Internet. <span class='orangeText'>Tener un sitio web garantiza que su empresa se pueda descubrir.</span>",
+      "statTwo": "Pequeñas empresas con presencia en línea y un sitio web <span class='orangeText'>crecen un 40% más rápido</span> que los que no lo hacen.",
+      "statThree": "Las páginas web <span class='orangeText'>generan 3 veces más clientes potenciales y ventas</span> que los métodos tradicionales."
+    },
+    "options": {
+      "service1": {
+        "title": "Diseño y desarrollo web",
+        "subtitle": "Servicios de diseño UX/UI",
+        "shortDescription": "Su sitio web es la cara de su empresa en el mundo digital. Nuestro talentoso equipo de diseñadores y desarrolladores crea sitios web visualmente impresionantes y fáciles de usar que dejan una impresión duradera en su público. <i class='orangeText'>Nos centramos en el diseño adaptable y la funcionalidad sin fisuras para garantizar que su presencia en línea destaque.</i>",
+        "description": "Nuestro servicio de diseño y desarrollo web es la piedra angular de la creación de identidades digitales cautivadoras para empresas de diversos sectores. No nos limitamos a crear sitios web, sino que los diseñamos para obtener resultados. Nuestro equipo de diseñadores y desarrolladores especializados colabora estrechamente con usted para comprender su visión y sus objetivos, asegurándose de que cada píxel y cada línea de código sirvan para algo. Tanto si necesita un sitio web impresionante desde cero como si desea renovar su presencia en línea actual, nuestros expertos convertirán sus ideas en una plataforma digital visualmente impactante, fácil de usar y de alto rendimiento que atraiga a su público y genere conversiones."
+      },
+      "service2": {
+        "title": "Optimización de motores de búsqueda (SEO)",
+        "subtitle": "",
+        "shortDescription": "Libere el verdadero potencial del tráfico de búsqueda orgánico con nuestras estrategias SEO basadas en datos. <i class='orangeText'>Utilizamos las últimas herramientas y conocimientos del sector para optimizar el posicionamiento de su sitio web en los motores de búsqueda, lo que genera un flujo constante de tráfico dirigido a su sitio.</i>",
+        "description": "En el vasto panorama digital, la visibilidad es la clave del éxito. Nuestro servicio de optimización para motores de búsqueda (SEO) está diseñado para impulsar su marca a la vanguardia de los resultados de los motores de búsqueda, garantizando que los clientes potenciales le encuentren antes que sus competidores. Con un profundo conocimiento de los algoritmos de los motores de búsqueda y de las últimas tendencias del sector, nuestros expertos en SEO emplean estrategias probadas para optimizar el posicionamiento de su sitio web y mejorar su autoridad en línea. Analizamos meticulosamente las palabras clave, optimizamos los elementos de la página y creamos vínculos de retroceso de alta calidad para impulsar su tráfico orgánico y aumentar su presencia en Internet. Con nuestra experiencia en SEO, su negocio puede obtener la visibilidad en línea que se merece, generando más tráfico cualificado y, en última instancia, mayores ingresos."
+      },
+      "service3": {
+        "title": "Marketing por correo electrónico",
+        "subtitle": "",
+        "shortDescription": "Aproveche el poder de las campañas de correo electrónico para nutrir a los clientes potenciales y mantener las relaciones con ellos. <i class='orangeText'>Nuestro equipo de expertos le ayudará a crear y ejecutar estrategias de marketing por correo electrónico que impulsen las conversiones y aumenten los ingresos.</i>",
+        "description": "Aproveche el poder de la comunicación personalizada y el compromiso con nuestro servicio de Email Marketing. En nuestra agencia digital, somos conscientes de que el correo electrónico sigue siendo una de las herramientas más eficaces para establecer relaciones con su público e impulsar las conversiones. Nuestros expertos en marketing por correo electrónico elaboran campañas atractivas y personalizadas que resuenan con su público objetivo. Segmentamos su lista de correo electrónico para garantizar que el mensaje correcto llegue a las personas adecuadas en el momento oportuno, aumentando las tasas de apertura y de clics. Desde diseños llamativos hasta textos persuasivos, nos aseguramos de que cada correo electrónico que enviamos represente los valores y objetivos de su marca. Con nuestro servicio de marketing por correo electrónico, podrá fidelizar a sus clientes potenciales y conseguir un importante retorno de la inversión, al tiempo que establece conexiones duraderas con su público."
+      }
+    }
+  },
+  "projects": {
+    "welcomeMessage": {
+      "one": "Sueña,",
+      "two": "Diseña,",
+      "three": "Entrega.",
+      "text": "Nos enorgullecemos de cada colaboración, utilizando estadísticas y análisis como guías para navegar por un panorama digital en constante evolución."
+    }
+  },
+  "studyCases": {
+    "projects": {
+      "project1": {
+        "id": 1,
+        "completed": true,
+        "info": {
+          "link": "amazing-pet-grooming",
+          "title": "Amazing Pet Grooming",
+          "place": "Canada",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_grooming.png",
+        "mockupImages": {
+          "big": "/images/mockupBigGrooming.png",
+          "mid": "/images/mockupMidGrooming.png",
+          "sm": "/images/mockupSmGrooming.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-grooming.png",
+          "meet": "AmazingPetGrooming, una empresa familiar dedicada al bienestar animal. Con sucursales en Hamilton y Cambridge, Ontario, ofrecen cuidados de primera calidad para perros y gatos de todas las razas y tamaños. El experimentado equipo ofrece servicios de peluquería personalizados que garantizan el confort y la felicidad de su mascota. Desde baños relajantes hasta recortes precisos, el equipo da prioridad al bienestar de su mascota, con el objetivo de mejorar su salud y su aspecto. Experimente su dedicación a la peluquería de mascotas concertando una cita en cualquiera de las dos instalaciones y sea testigo del impacto positivo en la vida de sus compañeros peludos.",
+          "background": "En Canadá, un país conocido por sus cambios extremos de temperatura y las variaciones en la exposición a la luz solar, la gente experimenta a menudo cambios de humor que pueden hacer que la salud mental sea algo frágil. En consecuencia, las personas recurren a distintos métodos para abordar este problema, y la compañía de un animal de compañía resulta ser una de las formas más eficaces de atajarlo. Al igual que ellos cuidan de nuestro bienestar mental con lealtad y amor, nosotros debemos proporcionarles los cuidados adecuados para mantenerlos limpios y felices. De este sentimiento de deber nace el concepto de AmazingPetGrooming para el cuidado de mascotas, ofreciendo servicios personalizados y de máxima calidad en respuesta a esta necesidad.",
+          "development": [
+            {
+              "image": "/images/changes_grooming.png",
+              "title": "Organización y cambios.",
+              "description": "El desarrollo de Amazing Pet Grooming se basó en una página web ya existente, a la que se podría denominar versión 1.0. Sin embargo, necesitaba más dinamismo y contenía muchos diseños repetitivos y poco atractivos tanto para los leads como para los clientes. Esta situación previa condujo a un rediseño completo de la página, centrándose en las animaciones, la organización, los menús de selección y el contenido visual general."
+            },
+            {
+              "image": "/images/booking_process.gif",
+              "title": "Proceso de reserva",
+              "description": "Para el proceso de reserva, ya sea para un gato o un perro, se le presentarán varios servicios para su mascota, que van desde cuidados como el corte de pelo hasta un día de spa. Una vez elegido el servicio deseado, se le pedirá información adicional, como el lugar preferido y el tipo de paquete que desea. En el caso de un perro, se le pedirá que indique su tamaño basándose en los modelos 3D proporcionados, que van de la S a la XL. Una vez completados estos pasos, tendrá la opción de elegir a un miembro concreto de Amazing Pet Grooming. A continuación, aparecerá una pantalla de confirmación y un calendario para finalizar la reserva. En ese momento, su cita quedará fijada, garantizando que su mascota reciba la mejor atención posible."
+            }
+          ],
+          "challenges": "El desarrollo de este proyecto no sólo nos ha permitido conectar con nuestras mascotas y apreciar los excelentes cuidados que se les prestan, sino que además incorpora técnicas de diseño innovadoras. Estas técnicas incluyen el uso de elementos en 3D para ofrecer a los usuarios una guía más completa e interactiva. Además, se han integrado múltiples funciones, como mapas.",
+          "figmaDesigns": ["/images/figmaDesktopGrooming.png"],
+          "designSystem": {
+            "typography": [
+              {
+                "heading": "H1 heavy",
+                "desktop": "171px",
+                "mobile": "80px"
+              },
+              {
+                "heading": "H2 heavy",
+                "desktop": "80px",
+                "mobile": "60px"
+              },
+              {
+                "heading": "H3 heavy",
+                "desktop": "50px",
+                "mobile": "40px"
+              },
+              {
+                "heading": "H4 medium",
+                "desktop": "45px",
+                "mobile": "30px"
+              },
+              {
+                "heading": "H5 regular",
+                "desktop": "36px",
+                "mobile": "24px"
+              },
+              {
+                "heading": "p regular",
+                "desktop": "16px",
+                "mobile": "16px"
+              }
+            ],
+            "colors": [
+              {
+                "name": "Primary",
+                "hex": "#65BFF8"
+              },
+              {
+                "name": "Secondary",
+                "hex": "#DDF2FF"
+              },
+              {
+                "name": "White",
+                "hex": "#FFFFFF"
+              },
+              {
+                "name": "Black",
+                "hex": "#2A2A2A"
+              },
+              {
+                "name": "Gray",
+                "hex": "#949494"
+              },
+              {
+                "name": "Purple",
+                "hex": "#7B1DF4"
+              },
+              {
+                "name": "Pink",
+                "hex": "#DF2C7C"
+              },
+              {
+                "name": "Blue",
+                "hex": "#3977EC"
+              }
+            ]
+          }
+        }
+      },
+      "project2": {
+        "id": 2,
+        "completed": true,
+        "info": {
+          "link": "pago-tienda",
+          "title": "Pago Tienda",
+          "place": "Argentina",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_pago_tienda.png",
+        "mockupImages": {
+          "big": "/images/mockupBigPago.png",
+          "mid": "/images/mockupMidPago.png",
+          "sm": "/images/mockupSmPago.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-pago.png",
+          "meet": "Pago Tienda es una página web donde los socios comerciales exhiben y comercializan sus productos o servicios para que los clientes puedan adquirirlos. Pago Tienda integra el método de pago en criptomoneda que actualmente es relativamente reciente e innovador en Argentina.",
+          "background": "En un mercado que se expande en grandes proporciones, no sólo en la región argentina, es vital acceder al mayor número de productos o servicios de forma rápida y sencilla. En el caso de Argentina, debido a su actual situación económica, nada favorable, la moneda local se ha devaluado abismalmente. Este hecho ha provocado que los habitantes de este país se vean obligados a recurrir a diferentes formas de preservar la liquidez, como los dólares o las criptodivisas. Esta situación ha motivado al equipo de Pago Tienda a diseñar una tienda online con opciones de pago como las criptodivisas.",
+          "development": [
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Procesos de registro.",
+              "description": "Durante el proceso de registro, se pedirá a los nuevos usuarios información como su dirección de correo electrónico, nombre y direcciones preferidas para lugares frecuentes y, por último, se pedirá al usuario que utilice la cartera de criptomonedas prediseñada para facilitar futuros pagos."
+            },
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Organización y características.",
+              "description": "Pago Tienda se desarrolló en diferentes fases. En la primera se estudió la popularidad de las criptomonedas en la región. Durante la segunda fase, se buscaron establecimientos y negocios dispuestos a aceptar pagos con criptodivisas. La tercera fase fue diseñar la página web y la cuarta fase fue desarrollar la página web."
+            },
+            {
+              "image": "/images/development3-pago.png",
+              "title": "Proceso de compra.",
+              "description": "Una vez que haya seleccionado todos los productos que desea, aparecerá una sección llamada carrito, la sección para realizar el pago de su compra. Se le pedirán ciertos datos como la dirección de entrega y el nombre del cliente. Para el pago, en este caso, con el método integrado de pago con criptomonedas que están vinculadas al monedero desarrollado para hacer más accesible el proceso de compra, se realizará un ingreso de la criptomoneda con la que decidas pagar, y ahora sólo tienes que esperar y disfrutar de tu pedido."
+            }
+          ],
+          "challenges": "Durante el desarrollo, adquirimos experiencia en el diseño y creación de tiendas online de tipo e-commerce, incluyendo sus respectivas secciones, carritos de compra y categorización de productos. Un reto adicional para este caso fue integrar PagoLinea con PagoTienda, una solución diseñada para agilizar el proceso de compra.",
+          "figmaDesigns": [
+            "/images/figmaDesktopPago.png",
+            "/images/figmaMobilePago.png"
+          ],
+          "designSystem": {
+            "typography": [
+              {
+                "heading": "H1 bold",
+                "desktop": "64px",
+                "mobile": "32px"
+              },
+              {
+                "heading": "H2 bold",
+                "desktop": "48px",
+                "mobile": "24px"
+              },
+              {
+                "heading": "H3 bold",
+                "desktop": "32px",
+                "mobile": "22px"
+              },
+              {
+                "heading": "H5 medium",
+                "desktop": "22px",
+                "mobile": "20px"
+              },
+              {
+                "heading": "P regular",
+                "desktop": "16px",
+                "mobile": "14px"
+              }
+            ],
+            "colors": [
+              {
+                "name": "Primary",
+                "hex": "#960FCC"
+              },
+              {
+                "name": "Secondary",
+                "hex": "#F7EEFB"
+              },
+              {
+                "name": "White",
+                "hex": "#FFFFFF"
+              },
+              {
+                "name": "Black",
+                "hex": "#3E3E3E"
+              },
+              {
+                "name": "Dark blue",
+                "hex": "#28292C"
+              },
+              {
+                "name": "Gray",
+                "hex": "#828385"
+              },
+              {
+                "name": "Light gray",
+                "hex": "#B0B0B0"
+              },
+              {
+                "name": "Main gradient",
+                "hex": "#640A88"
+              }
+            ]
+          }
+        }
+      },
+      "project3": {
+        "id": 3,
+        "completed": false,
+        "info": {
+          "link": "pago-tienda",
+          "title": "UnitradeFX",
+          "place": "Argentina",
+          "date": "2023",
+          "tags": ["UI Design", "Web Development"],
+          "technologies": ["React JS", "GSAP", "Tailwind CSS"]
+        },
+        "image": "/images/projects_copy.png",
+        "mockupImages": {
+          "big": "/images/mockupBigPago.png",
+          "mid": "/images/mockupMidPago.png",
+          "sm": "/images/mockupSmPago.png"
+        },
+        "studyCase": {
+          "image": "/images/study-main-pago.png",
+          "meet": "Pago Tienda es una página web donde los socios comerciales exhiben y comercializan sus productos o servicios para que los clientes puedan adquirirlos. Pago Tienda integra el método de pago en criptomoneda que actualmente es relativamente reciente e innovador en Argentina.",
+          "background": "En un mercado que se expande en grandes proporciones, no sólo en la región argentina, es vital acceder al mayor número de productos o servicios de forma rápida y sencilla. En el caso de Argentina, debido a su actual situación económica, nada favorable, la moneda local se ha devaluado abismalmente. Este hecho ha provocado que los habitantes de este país se vean obligados a recurrir a diferentes formas de preservar la liquidez, como los dólares o las criptodivisas. Esta situación ha motivado al equipo de Pago Tienda a diseñar una tienda online con opciones de pago como las criptodivisas.",
+          "development": [
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Procesos de registro.",
+              "description": "Para crear una experiencia operativa innovadora, los NODO Film Systems permitieron a los operadores de cámara ajustar el peso de las ruedas, controlar la masa y la resistencia y crear diferentes simulaciones de cámara."
+            },
+            {
+              "image": "/images/development1-pago.png",
+              "title": "Organización y características.",
+              "description": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations."
+            },
+            {
+              "image": "/images/development3-pago.png",
+              "title": "Procesos de compra.",
+              "description": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations."
+            }
+          ],
+          "challenges": "To create a groundbreaking operating experience, the NODO Film Systems allowed camera operators to adjust the weight of the wheels, control mass and drag, and create different camera simulations.",
+          "figmaDesigns": [
+            "/images/figmaDesktopPago.png",
+            "/images/figmaMobilePago.png"
+          ],
+          "designSystem": {
+            "typography": [
+              {
+                "heading": "H1 bold",
+                "desktop": "64px",
+                "mobile": "32px"
+              },
+              {
+                "heading": "H2 bold",
+                "desktop": "48px",
+                "mobile": "24px"
+              },
+              {
+                "heading": "H3 bold",
+                "desktop": "32px",
+                "mobile": "22px"
+              },
+              {
+                "heading": "H5 medium",
+                "desktop": "22px",
+                "mobile": "20px"
+              },
+              {
+                "heading": "P regular",
+                "desktop": "16px",
+                "mobile": "14px"
+              }
+            ],
+            "colors": [
+              {
+                "name": "Primary",
+                "hex": "#960FCC"
+              },
+              {
+                "name": "Secondary",
+                "hex": "#F7EEFB"
+              },
+              {
+                "name": "White",
+                "hex": "#FFFFFF"
+              },
+              {
+                "name": "Black",
+                "hex": "#3E3E3E"
+              },
+              {
+                "name": "Dark blue",
+                "hex": "#28292C"
+              },
+              {
+                "name": "Gray",
+                "hex": "#828385"
+              },
+              {
+                "name": "Light gray",
+                "hex": "#B0B0B0"
+              },
+              {
+                "name": "Main gradient",
+                "hex": "#640A88"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "text": {
+      "context": {
+        "title": "Contexto",
+        "team": "Conoce el equipo",
+        "background": "Antecedentes"
+      },
+      "development": {
+        "title": "Desarrollo"
+      },
+      "designSystem": {
+        "title": "Guia<br/>de<br/>estilos",
+        "table": {
+          "typography": {
+            "title": "Tipografía",
+            "heading": "Heading",
+            "desktop": "Desktop",
+            "mobile": "Mobile"
+          },
+          "colors": "Paleta de colores"
+        }
+      }
+    }
+  },
+  "about": {
+    "welcomeMessage": "Nosotros vivimos y respiramos diseño, innovación y la emoción de ayudar a las empresas a crecer.",
+
+    "title": "Nuestros porcesos",
+    "processes": [
+      {
+        "title": "Estrategia",
+        "description": "Iniciamos cada proyecto con una estrategia basada en datos que sienta las bases de su éxito. Nuestro equipo profundiza en la información del mercado, el comportamiento de los clientes y las tendencias del sector para elaborar un plan a medida que se ajuste a sus objetivos."
+      },
+      {
+        "title": "Diseño",
+        "description": "Nuestros magos del diseño dan vida a la imaginación y crean efectos visuales cautivadores que dejan una impresión duradera. Desde interfaces elegantes hasta gráficos asombrosos, creamos una experiencia de usuario encantadora que mantiene hechizados a los visitantes."
+      },
+      {
+        "title": "Desarrollo",
+        "description": "Nuestros brujos del desarrollo hacen magia y transforman el diseño en una realidad funcional. Con tecnología de vanguardia y una meticulosa atención al detalle, tejemos una red de código sin fisuras que potencia el rendimiento de su sitio web."
+      }
+    ]
+  },
+  "contact": {
+    "welcomeMessage": "Diseñemos,<br/>entreguemos.",
+    "formTitle": "¿Qué podemos hacer por usted?",
+    "placeholder": {
+      "name": "Escriba su nombre",
+      "email": "Escriba su correo electrónico",
+      "message": "¿Qué desea decirnos?"
+    }
+  },
+  "button": {
+    "send": "Enviar",
+    "becomeClient": "Hágase cliente",
+    "visitSite": "Visitar el sitio"
+  },
+  "seo": {
+    "home": {
+      "title": "Samacle - Agencia Web en Canadá",
+      "metaDescription": "Samacle - Agencia Web en Canadá: Elevando Empresas con Soluciones Web Dinámicas."
+    },
+    "about": {
+      "title": "Samacle - Acerca de Nosotros",
+      "metaDescription": "Samacle - Acerca de Nosotros: Principal Agencia Web en Canadá | Vivimos y respiramos diseño, innovación y la emoción de ayudar a las empresas a crecer."
+    },
+    "services": {
+      "title": "Samacle - Nuestros Servicios",
+      "metaDescription": "Samacle - Nuestros Servicios: Explore nuestra amplia gama de servicios web en Canadá, que incluyen diseño web, desarrollo, soluciones de SEO, comercio electrónico y más. Nuestro equipo dedicado se compromete a ayudar a que su empresa prospere en línea. Descubra cómo podemos adaptar nuestra experiencia para satisfacer sus necesidades únicas. Asóciese con nosotros en su viaje digital hoy."
+    },
+    "projects": {
+      "title": "Samacle - Nuestros Proyectos",
+      "metaDescription": "Samacle - Nuestros Proyectos: Desbloquee el Poder del Diseño y Desarrollo Web | Agencia Web Canadiense."
+    },
+    "contact": {
+      "title": "Samacle - Contáctenos",
+      "metaDescription": "Samacle - Contáctenos: Comuníquese con su confiable agencia web en Canadá."
+    },
+    "studyCases": {
+      "metaDescription": "Descubra las estrategias, desafíos y soluciones que llevaron al éxito, demostrando nuestro compromiso de brindar soluciones impactantes para nuestros clientes."
+    }
+  }
+}
