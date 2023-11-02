@@ -32,6 +32,7 @@ const Contact = () => {
         )
         .then(
           (result) => {
+            //TODO: show success message
             console.log(result.text);
           },
           (error) => {

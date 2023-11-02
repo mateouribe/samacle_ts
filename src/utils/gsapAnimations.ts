@@ -15,7 +15,7 @@ const changeBgColorAnimation = ({
   toggleActions = "",
 }: {
   trigger: string;
-  position: {
+  position?: {
     start: string;
     end: string;
   };
@@ -29,6 +29,9 @@ const changeBgColorAnimation = ({
   toggleActions?: string;
 }) => {
   const dependsOnBgColor = document.querySelectorAll(".dependsOnBgColor");
+  const dependsOnBgColor_text = document.querySelectorAll(
+    ".dependsOnBgColor_text"
+  );
   const linesBurger = document.querySelectorAll(".lineBurger");
   const circleBurger = document.querySelectorAll(".burgerCircle");
 
@@ -45,9 +48,17 @@ const changeBgColorAnimation = ({
           backgroundColor: colors.enter,
           overwrite: "auto",
         });
+        gsap.to(dependsOnBgColor_text, {
+          color: colors.exit,
+          overwrite: "auto",
+        });
       } else {
         gsap.to(["body", dependsOnBgColor], {
           backgroundColor: colors.exit,
+          overwrite: "auto",
+        });
+        gsap.to(dependsOnBgColor_text, {
+          color: colors.enter,
           overwrite: "auto",
         });
       }

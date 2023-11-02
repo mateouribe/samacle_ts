@@ -11,13 +11,13 @@ const Hero = () => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as uny).SplitText("#heroText", {
+    const splitTitleParent = new (window as any).SplitText("#heroText", {
       type: "words, chars",
       chars: "chars",
       charsClass: "wordsParent",
     });
 
-    const splitTitle = new (window as uny).SplitText("#heroText", {
+    const splitTitle = new (window as any).SplitText("#heroText", {
       type: "words, chars",
       charsClass: "wordsBlack swearFont",
     });

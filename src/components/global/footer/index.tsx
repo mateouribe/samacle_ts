@@ -11,9 +11,9 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full h-[80vh] bg-lightGray px-mobile md:px-tablet lg:px-desktop pt-tablet flex flex-col rounded-t-[10%] overflow-hidden">
+    <footer className="relative w-full min-h-[80vh] bg-lightGray px-mobile md:px-tablet lg:px-desktop pt-tablet flex flex-col rounded-t-[10%] overflow-hidden pb-100">
       <div className="flex flex-col justify-between w-full h-full md:flex-row gap-100 md:gap-0">
-        <div className="w-full md:w-[20%] flex flex-row md:flex-col gap-50">
+        <div className="w-full md:w-[20%] flex flex-col md:flex-col gap-50">
           <span className="text-sm text-gray">
             © 2023 Samacle. All right Reserved.
           </span>
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <ul className="flex flex-col gap-5 md:flex-row">
+          <ul className="flex flex-row gap-5 max-w-fit">
             <SocialMedia color={colors.gray} bgColor="#ECECEC" />
           </ul>
         </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         src={icon}
         alt="A Big icon representing Samacle - a web agency in Canada, positioned in the footer of the web page."
         loading="lazy"
-        className="w-full relative top-[5%]"
+        className="px-mobile md:px-tablet lg:px-desktop absolute -bottom-[5%] lg:-bottom-[20%] w-full left-1/2 transform -translate-x-1/2"
       />
     </footer>
   );
