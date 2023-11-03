@@ -175,6 +175,9 @@ body {
     display: none;
   }
 
+  .photos {
+    display: none;
+  }
   .desktopPhoto {
     display: none;
   }

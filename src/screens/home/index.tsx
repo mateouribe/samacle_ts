@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/all";
 import { colors } from "../../utils/constants";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-// import Transition from "../components/Transition";
 import Hero from "../../components/home/hero";
 import About from "../../components/home/about";
 import WhyUs from "../../components/home/whyUs";
@@ -12,15 +11,11 @@ import Services from "../../components/home/services";
 import Projects from "../../components/home/projects";
 import Contact from "../../components/home/contact";
 import SectionTitle from "../../components/customElements/sectionTitle";
-// import WhyUs from "../components/home/whyUs/WhyUs";
-// import Services from "../components/home/services/Services";
-// import Projects from "../components/home/projects/Projects";
-// import Contact from "../components/home/Contact";
-// import SectionTitle from "../components/customElements/SectionTitle";
+import Transition from "../../components/global/transition";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home = () => {
+const Home: React.FC = () => {
   const container = useRef(null);
 
   useLayoutEffect(() => {

@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 type Props = {
   project: Project;
   alignLeft?: boolean;
-  index: number;
   isFirstOne?: boolean;
 };
 
@@ -46,12 +45,12 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
 
   return (
     <div
-      className={`w-full h-[90vh] md:col-span-12 flex ${
+      className={`w-full h-[70vh] md:h-[80vh] md:col-span-12 flex ${
         alignLeft ? "justify-start" : "justify-end"
       }`}
       ref={container}
     >
-      <figure className="w-[100%] md:w-[45%] h-[90vh] flex flex-col gap-10">
+      <figure className="w-[100%] md:w-[45%] h-[70vh] md:h-[80vh] flex flex-col gap-10">
         <Link
           className="h-full cursor-none projectItemScroll"
           to={
