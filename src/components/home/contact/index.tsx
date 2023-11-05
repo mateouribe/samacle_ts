@@ -46,8 +46,9 @@ const Contact = () => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: container.current,
-        start: "top 85%",
-        end: "bottom 85%",
+        start: "top 90%",
+        end: "bottom 90%",
+
         animation: gsap.fromTo(
           ".contactContainer",
           {
@@ -57,7 +58,7 @@ const Contact = () => {
           {
             opacity: 1,
             yPercent: 0,
-            duration: 2,
+            duration: 1,
             ease: Expo.easeOut,
           }
         ),

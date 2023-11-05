@@ -32,7 +32,7 @@ const Mobile = ({ title, text, image, color }: Props) => {
           }}
         />{" "}
         <div className="flex flex-col gap-5">
-          <h3 className="text-black italic text-[20px]]">{title}</h3>
+          <h3 className="text-black text-[20px] font-medium">{title}</h3>
           <p className="text-black">{text}</p>
           <Button navigateTo="/contact-us" blackColor className="mt-50">
             {t("button.becomeClient")}

@@ -23,6 +23,9 @@ const Hero = () => {
     });
 
     const ctx = gsap.context(() => {
+      gsap.set(".servicesMainImg", {
+        scale: 0.9,
+      });
       const tl = gsap.timeline({});
       tl.fromTo(
         splitTitle.chars,
@@ -42,7 +45,7 @@ const Hero = () => {
         end: "bottom 10%",
         scrub: 1.5,
         animation: gsap.to(".servicesMainImg", {
-          scale: 0.9,
+          scale: 1,
         }),
       });
     }, container);
@@ -54,7 +57,7 @@ const Hero = () => {
     <div ref={container}>
       <Section
         fullHeightNav
-        className="flex flex-col items-end pt-desktop md:pt-tablet"
+        className="flex flex-col items-end py-desktop md:py-tablet"
       >
         <h4
           className="text-[20px] lg:text-[30px] font-swearDisplay leading-[95%] text-black text-right w-[80%] md:w-1/2 px-mobile md:px-tablet lg:px-desktop"

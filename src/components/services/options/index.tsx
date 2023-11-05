@@ -4,7 +4,7 @@ import Card from "./card";
 
 const Options = () => {
   return (
-    <Section hasPadding className="flex flex-col h-full gap-100 pt-desktop">
+    <Section hasPadding className="flex flex-col h-full gap-100 py-desktop">
       {services.map((service, index) => (
         <Card serviceImage={service.image} index={index} key={index} />
       ))}
