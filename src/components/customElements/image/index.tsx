@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
-  image: string;
+  image: string | undefined;
   position?: { start: string; end: string };
   onLoad?: boolean;
   duration?: number;
