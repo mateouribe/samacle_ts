@@ -77,7 +77,9 @@ const Desktop = ({ title, text, bgColor, backToWhite, className }: Props) => {
         <h3 className="font-medium text-black text-subtitleTablet">{title}</h3>
         <p className="text-black">{text}</p>
       </div>
-      <Button navigateTo="/contact-us">{t("button.becomeClient")}</Button>
+      <Button navigateTo="/contact-us" blackColor>
+        {t("button.becomeClient")}
+      </Button>
     </div>
   );
 };

@@ -64,7 +64,7 @@ const Item = ({ project, index }: Props) => {
       }}
     >
       <Link
-        className={`w-full h-[80vh] flex flex-col gap-10 hoverMouse cursor-none ${
+        className={`w-full h-[80vh] flex flex-col gap-10 hoverMouse ${
           index === 0 && "animateFirstProject"
         }`}
         ref={container}

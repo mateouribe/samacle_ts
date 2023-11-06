@@ -100,12 +100,12 @@ const Footer = () => {
           </ul>
         </div>
         <div className="w-full md:w-[50%] h-full">
-          <label className="flex flex-col gap-10 cursor-none">
+          <label className="flex flex-col gap-10">
             <p className="text-[22px] md:text-[32px] text-black">
               {t("footer.promotionFooter")}
             </p>
             <input
-              className="w-full px-20 py-20 bg-transparent border-[1px] border-gray rounded-10 text-gray placeholder:text-gray focus-visible:outline-none focus-visible:border-main cursor-none"
+              className="w-full px-20 py-20 bg-transparent border-[1px] border-gray text-gray placeholder:text-gray focus-visible:outline-none focus-visible:border-main"
               placeholder="hello@me.com"
             />
           </label>

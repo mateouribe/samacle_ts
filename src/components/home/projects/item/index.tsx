@@ -52,7 +52,7 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
     >
       <figure className="w-[100%] md:w-[45%] h-[70vh] md:h-[80vh] flex flex-col gap-10">
         <Link
-          className="h-full cursor-none projectItemScroll"
+          className="h-full projectItemScroll"
           to={
             project.completed
               ? `/our-projects/study-case/${project.info.link}`

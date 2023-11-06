@@ -103,7 +103,7 @@ const WhyUse = () => {
             />
           </div>
           {/* <!-- desktop content --> */}
-          <div className="photos w-[100%] h-[40vw] relative overflow-hidden rounded-10">
+          <div className="photos w-[100%] h-[40vw] relative overflow-hidden">
             <Photo image={blue} color="#94EFF9 #1BB7C8 #229AB2" />
             <Photo image={orange} color="#FFE2C2 #FF9F35 #CF7A1B" />
             <Photo image={pink} color="#FEB6CC #DF3866 #AA2147" />

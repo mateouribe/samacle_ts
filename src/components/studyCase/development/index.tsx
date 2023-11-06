@@ -36,7 +36,19 @@ const Development = ({ project, item }: Props) => {
 
       const splitTitle = new (window as any).SplitText(".developmentTitle", {
         type: "words, chars",
-        charsClass: "orangeWords",
+        charsClass: "blackWords",
+      });
+
+      const splitChallengesParent = new (window as any).SplitText(
+        ".challenge_text",
+        {
+          type: "words, lines",
+          linesClass: "wordsParent",
+        }
+      );
+
+      const splitChallenges = new (window as any).SplitText(".challenge_text", {
+        type: "words, lines",
       });
 
       const ctx = gsap.context(() => {
@@ -47,13 +59,30 @@ const Development = ({ project, item }: Props) => {
           animation: gsap.fromTo(
             splitTitle.chars,
             {
-              y: 45,
+              y: 39,
             },
             {
               y: 0,
-              duration: 1,
-              stagger: 0.02,
-              ease: Expo.easeOut,
+              duration: 1.2,
+              stagger: 0.01,
+              ease: Expo.easeInOut,
+            }
+          ),
+        });
+        ScrollTrigger.create({
+          trigger: ".challenge-container",
+          start: "top 80%",
+          end: "bottom 80%",
+          animation: gsap.fromTo(
+            splitChallenges.words,
+            {
+              y: 100,
+            },
+            {
+              y: 0,
+              duration: 1.2,
+              stagger: 0.007,
+              ease: Expo.easeInOut,
             }
           ),
         });
@@ -68,11 +97,11 @@ const Development = ({ project, item }: Props) => {
       {isLoaded && (
         <>
           <SectionTitle
-            className="text-black pl-mobile md:pl-tablet lg:pl-desktop developmentTitle"
+            className="text-black pl-mobile md:pl-tablet lg:pl-desktop developmentTitle leading-[39px]"
             text={t("studyCases.text.development.title")}
           ></SectionTitle>
           <div className="flex flex-col w-full gap-100 md:gap-0">
-            {project.studyCase.development.map((element, index) => (
+            {project?.studyCase.development.map((element, index) => (
               <Item
                 index={index}
                 item={item}
@@ -80,9 +109,11 @@ const Development = ({ project, item }: Props) => {
                 image={element.image}
               />
             ))}
-            <span className="text-black px-mobile md:px-tablet lg:px-desktop py-desktop text-[25px]">
-              {t(`${item}.studyCase.challenges`)}
-            </span>
+            <div className="challenge-container px-mobile md:px-tablet lg:px-desktop py-desktop">
+              <span className="text-black  text-[25px] leading-[40px] challenge_text">
+                {t(`${item}.studyCase.challenges`)}
+              </span>
+            </div>
           </div>
         </>
       )}

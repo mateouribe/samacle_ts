@@ -43,23 +43,81 @@ const Contact = () => {
   };
 
   useLayoutEffect(() => {
+    const splitTitleParent = new (window as any).SplitText(".contactTitle", {
+      type: "words, lines",
+      linesClass: "wordsParent",
+    });
+
+    const splitTitle = new (window as any).SplitText(".contactTitle", {
+      type: "words, lines",
+    });
+
+    const socialMediaItems = document.querySelectorAll(".socialMediaItem");
+    const splitSocialMediaItems: string[][] = [];
+    socialMediaItems.forEach((item) => {
+      const splitItemParent = new (window as any).SplitText(item, {
+        type: "lines",
+        linesClass: "wordsParent",
+      });
+
+      const splitItem = new (window as any).SplitText(item, {
+        type: "lines",
+      });
+
+      splitSocialMediaItems.push(splitItem.lines);
+    });
+
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: container.current,
-        start: "top 90%",
-        end: "bottom 90%",
-
+        start: "top 60%",
+        end: "bottom 60%",
         animation: gsap.fromTo(
-          ".contactContainer",
+          ".frmContainer",
           {
             opacity: 0,
-            yPercent: 100,
+            yPercent: 10,
           },
           {
             opacity: 1,
             yPercent: 0,
             duration: 1,
-            ease: Expo.easeOut,
+            ease: Expo.easeInOut,
+          }
+        ),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 60%",
+        end: "bottom 60%",
+        animation: gsap.fromTo(
+          splitTitle.words,
+          {
+            y: 32,
+          },
+          {
+            y: 0,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
+          }
+        ),
+      });
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 60%",
+        end: "bottom 60%",
+        animation: gsap.fromTo(
+          splitSocialMediaItems,
+          {
+            y: 32,
+          },
+          {
+            y: 0,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
           }
         ),
       });
@@ -76,30 +134,42 @@ const Contact = () => {
       >
         <div className="w-full md:w-[30%] md:h-full flex flex-row md:flex-col items-start justify-between">
           <SectionTitle
-            className="text-black leading-[90%]"
+            className="text-black leading-[90%] contactTitle"
             noMaxHeight
             text={contactTitle}
           ></SectionTitle>
 
           <div className="flex flex-col gap-20">
             <ul className="text-black">
-              <li>
-                <ATag href="mailto:team@samacle.com" colorHover="#9E9E9E">
+              <li className="socialMediaItem">
+                <ATag
+                  href="mailto:team@samacle.com"
+                  colorHover="#9E9E9E"
+                  className="socialMediaItem"
+                >
                   team@samacle.com
                 </ATag>
               </li>
-              <li>
-                <ATag href="tel:=14375186019" colorHover="#9E9E9E">
+              <li className="socialMediaItem">
+                <ATag
+                  href="tel:=14375186019"
+                  colorHover="#9E9E9E"
+                  className="socialMediaItem"
+                >
                   +1 (437) 518-6019
                 </ATag>
               </li>
-              <li>
-                <ATag href="tel:=14374730048" colorHover="#9E9E9E">
+              <li className="socialMediaItem">
+                <ATag
+                  href="tel:=14374730048"
+                  colorHover="#9E9E9E"
+                  className="socialMediaItem"
+                >
                   +1 (437) 473-0048
                 </ATag>
               </li>
-              <li>
-                <ATag href="/" colorHover="#9E9E9E">
+              <li className="socialMediaItem">
+                <ATag href="/" colorHover="#9E9E9E" className="socialMediaItem">
                   Waterloo, ON, Canada.
                 </ATag>
               </li>
@@ -109,7 +179,7 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full md:w-[60%] h-full flex flex-col justify-start items-center gap-30">
+        <div className="w-full md:w-[60%] h-full flex flex-col justify-start items-center gap-30 frmContainer">
           <h3 className="text-black text-text md:text-subtitleTablet">
             {t("home.contact.formTitle")}
           </h3>
@@ -140,7 +210,7 @@ const Contact = () => {
               textarea
               required
             />
-            <Button className="mt-20" type="submit">
+            <Button className="mt-20" type="submit" icon="plane">
               {t("button.send")}
             </Button>
           </form>

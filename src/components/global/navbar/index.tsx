@@ -265,7 +265,7 @@ const Navbar = () => {
             <span className="text-black material-symbols-outlined hover:text-main">
               language
             </span>
-            <div className="bg-white absolute left-0 top-full min-w-max py-5 rounded-10 rounded-tl-[0px] border-[1px] border-gray language-options opacity-0 scale-0 z-[-10]">
+            <div className="bg-white absolute left-0 top-full min-w-max py-5 rounded-tl-[0px] border-[1px] border-gray language-options opacity-0 scale-0 z-[-10]">
               <ul>
                 <li
                   className="px-10 hover:bg-lightGray"

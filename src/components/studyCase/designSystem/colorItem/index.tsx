@@ -14,7 +14,7 @@ const ColorItem = ({ item, index, spanTwo = false }: Props) => {
       key={index}
     >
       <div
-        className="w-full h-full rounded-10"
+        className="w-full h-full"
         style={
           item.hex.split("-")[1]
             ? {

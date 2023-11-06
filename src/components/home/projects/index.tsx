@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   const container = useRef(null);
   const { t } = useTranslation();
+  const leading = 39;
 
   useLayoutEffect(() => {
     const splitTitleParent = new (window as any).SplitText(".projectTitle", {
@@ -27,7 +28,6 @@ const Projects = () => {
     });
 
     const ctx = gsap.context(() => {
-      let tl = gsap.timeline();
       changeBgColorAnimation({
         trigger: ".projects-bg-trigger",
         colors: {
@@ -41,21 +41,20 @@ const Projects = () => {
           end: "bottom 30%",
         },
       });
-
       ScrollTrigger.create({
         trigger: container.current,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top 70%",
+        end: "bottom 70%",
         animation: gsap.fromTo(
           splitTitle.chars,
           {
-            y: 45,
+            y: leading,
           },
           {
             y: 0,
-            duration: 1.5,
-            stagger: 0.02,
-            ease: Expo.easeOut,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
           }
         ),
       });
@@ -71,7 +70,7 @@ const Projects = () => {
         className="flex flex-col gap-50 min-h-[100vh] projects-bg-trigger"
       >
         <SectionTitle
-          className="projectTitle text-main"
+          className={`projectTitle text-main leading-[${leading}px]`}
           text={t("home.projects.title")}
         ></SectionTitle>
         <div className="grid w-full h-full grid-cols-1 gap-100 md:gap-50 md:grid-cols-12 ">

@@ -69,7 +69,6 @@
 }
 
 html {
-  scroll-behavior: initial !important;
   --cursor-color: #ff6a00d9;
 }
 

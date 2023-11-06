@@ -12,7 +12,6 @@ import Footer from "./components/global/footer";
 
 function App() {
   const location = useLocation();
-
   return (
     <>
       <Navbar />

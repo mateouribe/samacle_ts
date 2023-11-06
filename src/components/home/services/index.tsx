@@ -113,23 +113,41 @@ const Services = () => {
           menuExit: colors.black,
         },
         position: {
-          start: "top 50%",
+          start: "top 60%",
           end: "bottom 30.5%",
         },
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 60%",
+        end: "bottom 60%",
+        animation: gsap.fromTo(
+          splitTitle.chars,
+          {
+            y: 30,
+          },
+          {
+            y: 0,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
+          }
+        ),
       });
     }, container);
 
     return () => ctx.revert();
-  }, []);
+  }, [isDesktop]);
 
   return (
-    <div ref={container} className="">
+    <div ref={container}>
       <Section
         hasPadding
         className="flex flex-col gap-50 min-h-[100vh] sevices-bg-trigger"
       >
         <SectionTitle
-          className="servicesTitle text-beige"
+          className="servicesTitle text-beige leading-[30px]"
           text={t("home.services.title")}
         ></SectionTitle>
         <section className="relative flex flex-col services">

@@ -22,7 +22,7 @@ const Mobile = ({ title, text, image, color }: Props) => {
         }}
       >
         <div
-          className="w-full h-full rounded-10"
+          className="w-full h-full"
           style={{
             backgroundImage: `url(${image})`,
             backgroundSize: "cover",

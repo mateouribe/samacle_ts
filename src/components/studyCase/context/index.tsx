@@ -15,22 +15,49 @@ const Context = ({ project }: Props) => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
+    const splitTitleParent = new (window as any).SplitText(".ctxTitle", {
+      type: "words, lines",
+      linesClass: "wordsParent",
+    });
+
+    const splitTitle = new (window as any).SplitText(".ctxTitle", {
+      type: "words, lines",
+    });
+
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: container.current,
         start: "top 70%",
         end: "bottom 70%",
         animation: gsap.fromTo(
-          ".ctxTitle",
+          splitTitle.words,
+          {
+            y: 32,
+          },
+          {
+            y: 0,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
+          }
+        ),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 70%",
+        end: "bottom 70%",
+        animation: gsap.fromTo(
+          ".items-container",
           {
             opacity: 0,
-            yPercent: 50,
+            yPercent: 5,
           },
           {
             opacity: 1,
             yPercent: 0,
-            duration: 1.5,
-            ease: Expo.easeOut,
+            duration: 1,
+            ease: Expo.easeInOut,
           }
         ),
       });
@@ -45,11 +72,11 @@ const Context = ({ project }: Props) => {
       ref={container}
     >
       <SectionTitle
-        className="text-black ctxTitle"
+        className="text-black ctxTitle leading-[32px]"
         noMaxHeight
         text={t("studyCases.text.context.title")}
       ></SectionTitle>
-      <div className="flex flex-col w-full h-full">
+      <div className="flex flex-col w-full h-full items-container">
         <Item
           title={t("studyCases.text.context.team")}
           text={t(`${project}.studyCase.meet`)}

@@ -15,7 +15,7 @@ import Transition from "../../components/global/transition";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home: React.FC = () => {
+const Home = () => {
   const container = useRef(null);
 
   useLayoutEffect(() => {
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 
     const splitTitle = new (window as any).SplitText(".whyUs", {
       type: "words, chars",
-      charsClass: "orangeWords",
+      charsClass: "blackWords",
     });
 
     const body = document.querySelector("body");
@@ -35,18 +35,18 @@ const Home: React.FC = () => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: ".whyUsTrigger",
-        start: "top 85%",
-        end: "bottom 85%",
+        start: "top 90%",
+        end: "bottom 90%",
         animation: gsap.fromTo(
           splitTitle.chars,
           {
-            y: 45,
+            y: 30,
           },
           {
             y: 0,
-            duration: 1.5,
-            stagger: 0.02,
-            ease: Expo.easeOut,
+            duration: 1.2,
+            stagger: 0.01,
+            ease: Expo.easeInOut,
           }
         ),
       });
@@ -72,8 +72,8 @@ const Home: React.FC = () => {
 
       <Hero />
       <About />
-      <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet md:ob-0 whyUsTrigger">
-        <SectionTitle className="whyUs text-main" text={text} />
+      <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet md:pb-0 whyUsTrigger ">
+        <SectionTitle className="text-black whyUs leading-[30px]" text={text} />
       </div>
       <WhyUs />
       <Services />
