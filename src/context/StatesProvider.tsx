@@ -17,6 +17,8 @@ type States = {
   setAnimateNavbar: React.Dispatch<React.SetStateAction<boolean>>;
   language: string;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
+  showMessage: boolean;
+  setShowMessage: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const defaultStates: States = {
@@ -26,6 +28,8 @@ const defaultStates: States = {
   setAnimateNavbar: () => {},
   language: "en",
   setLanguage: () => {},
+  showMessage: false,
+  setShowMessage: () => {},
 };
 
 const StatesContext = createContext<States>(defaultStates);
@@ -35,6 +39,7 @@ const StatesProvider = ({ children }: Props) => {
   const desktopSize = 1024;
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= desktopSize);
   const [language, setLanguage] = useState("en");
+  const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
     const checkScreenWidth = () => {
@@ -59,6 +64,8 @@ const StatesProvider = ({ children }: Props) => {
         setAnimateNavbar,
         language,
         setLanguage,
+        showMessage,
+        setShowMessage,
       }}
     >
       {children}

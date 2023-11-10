@@ -67,7 +67,7 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
               noHover={!project.completed && true}
             />
             {!project.completed && (
-              <div className="w-full h-full absolute left-0 top-0 bg-black/80 flex justify-center items-center z-[999]">
+              <div className="w-full h-full absolute left-0 top-0 bg-black/80 flex justify-center items-center z-[20]">
                 <span className="text-[20px] md:text-[30px] text-gray">
                   Coming soon...
                 </span>

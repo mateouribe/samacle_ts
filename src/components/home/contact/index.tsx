@@ -1,4 +1,4 @@
-import { FormEvent, useLayoutEffect, useRef } from "react";
+import { FormEvent, useLayoutEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -10,13 +10,17 @@ import SocialMedia from "../../global/socialMedia";
 import SectionTitle from "../../customElements/sectionTitle";
 import Button from "../../customElements/button";
 import { colors } from "../../../utils/constants";
+import Alert from "../../customElements/alert";
+import { useStatesContext } from "../../../context/StatesProvider";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const container = useRef(null);
   const { t } = useTranslation();
   const contactTitle = t("home.contact.title");
-
+  const [message, setMessage] = useState("");
+  const { showMessage, setShowMessage } = useStatesContext();
+  const [typeAlert, setTypeAlert] = useState<"success" | "error">("success");
   const form = useRef(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -31,12 +35,15 @@ const Contact = () => {
           "cUNHhLO-5dUz6GaiH"
         )
         .then(
-          (result) => {
-            //TODO: show success message
-            console.log(result.text);
+          () => {
+            setMessage("We've got it from here! Mesage sent.");
+            setShowMessage(true);
+            setTypeAlert("success");
           },
-          (error) => {
-            console.log(error.text);
+          () => {
+            setMessage("Something went wrong, please try again.");
+            setShowMessage(true);
+            setTypeAlert("error");
           }
         );
     }
@@ -94,7 +101,7 @@ const Contact = () => {
         animation: gsap.fromTo(
           splitTitle.words,
           {
-            y: 32,
+            y: 39,
           },
           {
             y: 0,
@@ -127,14 +134,14 @@ const Contact = () => {
   }, []);
 
   return (
-    <div ref={container}>
+    <div ref={container} className="relative">
       <Section
         hasPadding
         className="flex min-h-[100vh] flex-col justify-between md:flex-row md:h-view gap-50 py-desktop contactContainer"
       >
         <div className="w-full md:w-[30%] md:h-full flex flex-row md:flex-col items-start justify-between">
           <SectionTitle
-            className="text-black leading-[90%] contactTitle"
+            className="text-black leading-[39px] contactTitle"
             noMaxHeight
             text={contactTitle}
           ></SectionTitle>
@@ -216,6 +223,7 @@ const Contact = () => {
           </form>
         </div>
       </Section>
+      <Alert message={message} type={typeAlert} />
     </div>
   );
 };

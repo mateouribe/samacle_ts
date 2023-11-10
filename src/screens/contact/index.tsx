@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, FormEvent } from "react";
+import { useLayoutEffect, useRef, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Section from "../../components/customElements/section";
 import SectionTitle from "../../components/customElements/sectionTitle";
@@ -10,10 +10,16 @@ import { Expo, gsap } from "gsap";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { colors } from "../../utils/constants";
+import Alert from "../../components/customElements/alert";
+import { useStatesContext } from "../../context/StatesProvider";
 
 const Contact = () => {
   const container = useRef(null);
   const { t } = useTranslation();
+  const [message, setMessage] = useState("");
+  const { showMessage, setShowMessage } = useStatesContext();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [typeAlert, setTypeAlert] = useState<"success" | "error">("success");
 
   useLayoutEffect(() => {
     const splitTitleParent = new (window as any).SplitText(".contactTitle", {
@@ -80,7 +86,7 @@ const Contact = () => {
           stagger: 0.01,
           ease: Expo.easeInOut,
         },
-        "-=1"
+        "-=1.2"
       );
 
       gsap.to(body, {
@@ -107,19 +113,22 @@ const Contact = () => {
           "cUNHhLO-5dUz6GaiH"
         )
         .then(
-          (result) => {
-            //TODO: show success message
-            console.log(result.text);
+          () => {
+            setMessage("We've got it from here! Mesage sent.");
+            setTypeAlert("success");
+            setShowMessage(true);
           },
-          (error) => {
-            console.log(error.text);
+          () => {
+            setMessage("Something went wrong, please try again.");
+            setTypeAlert("error");
+            setShowMessage(true);
           }
         );
     }
   };
 
   return (
-    <main ref={container}>
+    <main ref={container} className="relative">
       <Helmet>
         <title>{t("seo.contact.title")}</title>
         <meta name="description" content={t("seo.contact.metaDescription")} />
@@ -213,6 +222,8 @@ const Contact = () => {
           </form>
         </div>
       </Section>
+
+      <Alert type={typeAlert} message={message} />
     </main>
   );
 };
