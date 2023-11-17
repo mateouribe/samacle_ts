@@ -128,6 +128,10 @@
               { "name": "Pink", "hex": "#DF2C7C" },
               { "name": "Blue", "hex": "#3977EC" }
             ]
+          },
+          "clientReview": {
+            "text": "We're thrilled with the outstanding website crafted by Samacle for our pet grooming store! The design perfectly captures our love for animals, creating a visually stunning and user-friendly platform. The seamless navigation and engaging features have enhanced our online presence, attracting more pet lovers to our services. Working with Samacle was a pleasure, and we highly recommend their expertise to businesses seeking a professional and pet-centric online presence.",
+            "client": "Amazing Pet Grooming"
           }
         }
       },
@@ -192,6 +196,10 @@
               { "name": "Light gray", "hex": "#B0B0B0" },
               { "name": "Main gradient", "hex": "#640A88" }
             ]
+          },
+          "clientReview": {
+            "text": "Highly impressed with the exceptional work from Samacle! They crafted a platform for us akin to Uber Eats, flawlessly integrating our online wallet. The meticulous attention to detail and efficient implementation truly stood out. Thanks to their efforts, we now boast a user-friendly app that has revolutionized our service delivery. I wholeheartedly recommend Samacle for their professionalism and commitment to excellence.",
+            "client": "Herik Uribe"
           }
         }
       },
@@ -256,6 +264,9 @@
               { "name": "Light gray", "hex": "#B0B0B0" },
               { "name": "Main gradient", "hex": "#640A88" }
             ]
+          },
+          "clientReview": {
+            "text": "W"
           }
         }
       }

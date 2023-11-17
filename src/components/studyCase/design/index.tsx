@@ -56,7 +56,7 @@ const Design = ({ project }: Props) => {
 
       const ctx = gsap.context(() => {
         changeBgColorAnimation({
-          trigger: ".design-bg-trigger",
+          trigger: container,
           colors: {
             enter: colors.black,
             exit: colors.white,

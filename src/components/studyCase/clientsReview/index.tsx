@@ -40,7 +40,7 @@ const ClientsReview = ({ project }: Props) => {
   }, []);
   return (
     <section
-      className="py-desktop px-mobile md:px-tablet lg:px-desktop flex flex-col gap-100 min-h-[90vh] justify-center items-center relative"
+      className="py-desktop px-mobile md:px-tablet lg:px-desktop flex flex-col gap-100 min-h-[90vh] justify-center items-center relative bg-black"
       ref={container}
     >
       <div className="flex flex-col gap-5 clientOpinion z-[9999]">
