@@ -10,6 +10,7 @@ import projectsSs from "../../../assets/images/projectsSs.png";
 import aboutSs from "../../../assets/images/aboutSs.png";
 import contactSs from "../../../assets/images/contactSs.png";
 import whiteIcon from "../../../assets/images/whiteIcon.svg";
+import SplitType from "split-type";
 
 const Navbar = () => {
   const { i18n } = useTranslation();
@@ -70,14 +71,25 @@ const Navbar = () => {
       mobileTl.current = gsap.timeline({ paused: true });
       const tl = mobileTl.current;
 
-      const items = gsap.utils.toArray(".mobileItem");
-      const splitMobileItems: string[][] = [];
-      items.forEach((item) => {
-        const split = new (window as any).SplitText(item, {
-          type: "words",
-        });
+      const items = document.getElementsByClassName(
+        "mobileItem"
+      ) as HTMLCollectionOf<HTMLElement>;
+      const splitMobileItems: HTMLElement[][] = [];
 
-        splitMobileItems.push(split.words);
+      Array.from(items).forEach((item: HTMLElement) => {
+        const split = new SplitType(item, {
+          types: ["words"],
+        });
+        // splitMobileItems.push(splitMobile.words);
+
+        // Push the split.words to the splitMobileItems array
+        if (
+          split.words !== null &&
+          split.words !== undefined &&
+          split.words.length > 0
+        ) {
+          splitMobileItems.push(split.words);
+        }
       });
 
       //Set position of items

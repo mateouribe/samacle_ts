@@ -202,23 +202,3 @@ body {
     max-height: 62px !important;
   }
 }
-
-@media (min-width: 768px) {
-  .mini-map {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    width: 400px;
-    height: 285px;
-    z-index: 20000;
-    border-radius: 10px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-    border: 1px solid #282828;
-    background: url("../public/images/figmaDesktopPago.png") top left no-repeat;
-    background-size: cover;
-  }
-  .mini-map-marker {
-    position: absolute;
-    border: 2px solid #fff;
-  }
-}

@@ -12,6 +12,7 @@ import Button from "../../customElements/button";
 import { colors } from "../../../utils/constants";
 import Alert from "../../customElements/alert";
 import { useStatesContext } from "../../../context/StatesProvider";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
@@ -19,7 +20,7 @@ const Contact = () => {
   const { t } = useTranslation();
   const contactTitle = t("home.contact.title");
   const [message, setMessage] = useState("");
-  const { showMessage, setShowMessage } = useStatesContext();
+  const { setShowMessage } = useStatesContext();
   const [typeAlert, setTypeAlert] = useState<"success" | "error">("success");
   const form = useRef(null);
 
@@ -50,28 +51,30 @@ const Contact = () => {
   };
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".contactTitle", {
-      type: "words, lines",
-      linesClass: "wordsParent",
+    const splitTitle = new SplitType(".contactTitle", {
+      types: ["words", "lines"],
+      lineClass: "wordsParent",
     });
 
-    const splitTitle = new (window as any).SplitText(".contactTitle", {
-      type: "words, lines",
-    });
+    const socialMediaItems = document.getElementsByClassName(
+      "socialMediaItem"
+    ) as HTMLCollectionOf<HTMLElement>;
 
-    const socialMediaItems = document.querySelectorAll(".socialMediaItem");
-    const splitSocialMediaItems: string[][] = [];
-    socialMediaItems.forEach((item) => {
-      const splitItemParent = new (window as any).SplitText(item, {
-        type: "lines",
-        linesClass: "wordsParent",
+    const splitSocialMediaItems: HTMLElement[][] = [];
+
+    Array.from(socialMediaItems).forEach((item: HTMLElement) => {
+      const split = new SplitType(item, {
+        types: "lines",
       });
 
-      const splitItem = new (window as any).SplitText(item, {
-        type: "lines",
-      });
-
-      splitSocialMediaItems.push(splitItem.lines);
+      // Push the split.words to the splitMobileItems array
+      if (
+        split.lines !== null &&
+        split.lines !== undefined &&
+        split.lines.length > 0
+      ) {
+        splitSocialMediaItems.push(split.lines);
+      }
     });
 
     const ctx = gsap.context(() => {
@@ -148,7 +151,7 @@ const Contact = () => {
 
           <div className="flex flex-col gap-20">
             <ul className="text-black">
-              <li className="socialMediaItem">
+              <li className="socialMediaItem wordsParent">
                 <ATag
                   href="mailto:team@samacle.com"
                   colorHover="#9E9E9E"
@@ -157,7 +160,7 @@ const Contact = () => {
                   team@samacle.com
                 </ATag>
               </li>
-              <li className="socialMediaItem">
+              <li className="socialMediaItem wordsParent">
                 <ATag
                   href="tel:=14375186019"
                   colorHover="#9E9E9E"
@@ -166,7 +169,7 @@ const Contact = () => {
                   +1 (437) 518-6019
                 </ATag>
               </li>
-              <li className="socialMediaItem">
+              <li className="socialMediaItem wordsParent">
                 <ATag
                   href="tel:=14374730048"
                   colorHover="#9E9E9E"
@@ -175,7 +178,7 @@ const Contact = () => {
                   +1 (437) 473-0048
                 </ATag>
               </li>
-              <li className="socialMediaItem">
+              <li className="socialMediaItem wordsParent">
                 <ATag href="/" colorHover="#9E9E9E" className="socialMediaItem">
                   Waterloo, ON, Canada.
                 </ATag>

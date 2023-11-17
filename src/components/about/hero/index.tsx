@@ -2,20 +2,16 @@ import { useLayoutEffect, useRef } from "react";
 import { Expo, gsap } from "gsap";
 import Section from "../../customElements/section";
 import { useTranslation } from "react-i18next";
+import SplitType from "split-type";
 
 const Hero = () => {
   const container = useRef(null);
   const { t } = useTranslation();
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText("#aboutTitle", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText("#aboutTitle", {
-      type: "words, chars",
-      charsClass: "wordsBlack swearFont",
+    const splitTitle = new SplitType("#aboutTitle", {
+      types: ["words", "chars"],
+      charClass: "wordsBlack swearFont ",
+      wordClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {

@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import Item from "./item";
 import SectionTitle from "../../customElements/sectionTitle";
 import Section from "../../customElements/section";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const Process = () => {
@@ -14,15 +15,10 @@ const Process = () => {
   const container = useRef(null);
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".processTitle", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".processTitle", {
-      type: "words, chars",
-      charsClass: "orangeWords",
+    const splitTitle = new SplitType(".processTitle", {
+      types: ["words", "chars"],
+      charClass: "orangeWords",
+      wordClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {
