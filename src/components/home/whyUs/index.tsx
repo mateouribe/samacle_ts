@@ -43,7 +43,7 @@ const WhyUse = () => {
 
   return (
     <div ref={container}>
-      <div className="relative flex gallery">
+      <div className="relative flex w-full gallery">
         {/* Left side */}
         <div className="w-1/2 left outline-1">
           {/* Desktop content */}
@@ -73,10 +73,9 @@ const WhyUse = () => {
         </div>
 
         {/* Right side */}
-        <div className="flex flex-col justify-center w-1/2 right h-view px-mobile md:px-desktop lg:pl-0 lg:pr-desktop">
-          {/* //TODO:pr-100 */}
+        <div className="flex flex-col justify-center w-full lg:w-1/2 right h-view px-mobile md:px-tablet lg:pl-0 lg:pr-desktop">
           {/* <!-- add mobile content here--> */}
-          <div className="hidden w-full mobileContent mb-100">
+          <div className="hidden w-full mobileContent mb-100 gap-50">
             <Mobile
               title={t("home.whyUs.reasonOneTitle")}
               text={t("home.whyUs.reasonOneDescription")}

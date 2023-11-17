@@ -72,7 +72,7 @@ const Home = () => {
 
       <Hero />
       <About />
-      <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet md:pb-0 whyUsTrigger ">
+      <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet whyUsTrigger ">
         <SectionTitle className="text-black whyUs leading-[30px]" text={text} />
       </div>
       <WhyUs />

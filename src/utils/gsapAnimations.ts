@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { MutableRefObject } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const changeBgColorAnimation = ({
@@ -14,7 +15,7 @@ const changeBgColorAnimation = ({
   markers = false,
   toggleActions = "",
 }: {
-  trigger: string;
+  trigger: MutableRefObject<HTMLElement | null> | string;
   position?: {
     start: string;
     end: string;
@@ -36,7 +37,7 @@ const changeBgColorAnimation = ({
   const circleBurger = document.querySelectorAll(".burgerCircle");
 
   ScrollTrigger.create({
-    trigger: trigger,
+    trigger: typeof trigger === "string" ? trigger : trigger.current,
     start: position.start,
     end: position.end,
     markers: markers,
@@ -66,7 +67,7 @@ const changeBgColorAnimation = ({
   });
 
   ScrollTrigger.create({
-    trigger: trigger,
+    trigger: typeof trigger === "string" ? trigger : trigger.current,
     start: position.start,
     end: position.end,
     onToggle: (self) => {
@@ -86,7 +87,7 @@ const changeBgColorAnimation = ({
   });
 
   ScrollTrigger.create({
-    trigger: trigger,
+    trigger: typeof trigger === "string" ? trigger : trigger.current,
     start: position.start,
     end: position.end,
     onToggle: (self) => {

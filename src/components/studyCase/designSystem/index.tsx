@@ -46,6 +46,7 @@ const DesignSystem = ({ project }: Props) => {
             }
           ),
         });
+
         ScrollTrigger.create({
           trigger: container.current,
           start: "top 55%",
@@ -64,8 +65,9 @@ const DesignSystem = ({ project }: Props) => {
             }
           ),
         });
+
         changeBgColorAnimation({
-          trigger: ".study_case_design_system-bg-trigger",
+          trigger: container,
           colors: {
             enter: colors.black,
             exit: colors.black,
@@ -89,7 +91,7 @@ const DesignSystem = ({ project }: Props) => {
       ref={container}
     >
       {isLoaded && (
-        <div className="study_case_design_system-bg-trigger">
+        <>
           <SectionTitle
             noMaxHeight
             className="text-white styleGuideTitle"
@@ -160,7 +162,7 @@ const DesignSystem = ({ project }: Props) => {
               </div>
             </Table>
           </div>
-        </div>
+        </>
       )}
     </section>
   );

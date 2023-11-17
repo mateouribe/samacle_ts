@@ -57,7 +57,7 @@ const Hero = () => {
     <div ref={container}>
       <Section
         fullHeightNav
-        className="flex flex-col items-end py-desktop md:py-tablet"
+        className="flex flex-col items-end py-desktop md:pb-tablet md:pt-[100px] "
       >
         <h4
           className="text-[20px] lg:text-[30px] font-swearDisplay leading-[95%] text-black text-right w-[80%] md:w-1/2 px-mobile md:px-tablet lg:px-desktop"

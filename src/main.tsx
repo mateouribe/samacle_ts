@@ -8,7 +8,6 @@ import i18next from "i18next";
 import common_en from "./locales/en/translation.json";
 import common_fr from "./locales/fr/translation.json";
 import common_sp from "./locales/sp/translation.json";
-import common_hi from "./locales/hi/translation.json";
 import { HelmetProvider } from "react-helmet-async";
 import StatesProvider from "./context/StatesProvider.tsx";
 
@@ -19,7 +18,6 @@ i18next.init({
     en: { translation: common_en },
     fr: { translation: common_fr },
     sp: { translation: common_sp },
-    hi: { translation: common_hi },
   },
 });
 

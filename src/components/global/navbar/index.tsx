@@ -291,14 +291,14 @@ const Navbar = () => {
                 >
                   Español
                 </li>
-                <li
+                {/* <li
                   className="px-10 hover:bg-lightGray"
                   onClick={() => {
                     changeLanguage("hi");
                   }}
                 >
                   Hindi{" "}
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
