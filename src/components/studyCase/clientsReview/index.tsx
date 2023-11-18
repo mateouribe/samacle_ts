@@ -42,7 +42,7 @@ const ClientsReview = ({ project }: Props) => {
       className="py-desktop px-mobile md:px-tablet lg:px-desktop flex flex-col gap-100 min-h-[90vh] justify-center items-center relative bg-black"
       ref={container}
     >
-      <div className="flex flex-col gap-5 clientOpinion z-[9999]">
+      <div className="flex flex-col gap-5 clientOpinion z-[99]">
         <p className="text-[22px] md:text-[32px] uppercase text-beige">
           <span className="text-[50px] leading-[0px]">"</span>
           {t(`${project}.studyCase.clientReview.text`)}

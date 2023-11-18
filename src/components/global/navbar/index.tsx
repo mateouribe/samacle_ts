@@ -11,8 +11,11 @@ import aboutSs from "../../../assets/images/aboutSs.png";
 import contactSs from "../../../assets/images/contactSs.png";
 import whiteIcon from "../../../assets/images/whiteIcon.svg";
 import SplitType from "split-type";
+import { navigateToPage } from "../../../utils/navigateToPage.js";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { i18n } = useTranslation();
   const mobileTl = useRef(null || gsap.timeline());
   const mobileContainer = useRef(null);
@@ -329,7 +332,7 @@ const Navbar = () => {
           alt="A small black-colored icon representing Samacle - Web Agency in Canada for mobile devices, positioned in the header of the web page."
           className="w-[134px] blacklogo bg-white rounded-full p-10"
           loading="lazy"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => navigateToPage(navigate, "/")}
         />
         <div
           className="w-[50px] h-[50px] border-[3px] border-black flex flex-col justify-center items-center gap-[5px] rounded-full z-[9999] burgerCircle"
