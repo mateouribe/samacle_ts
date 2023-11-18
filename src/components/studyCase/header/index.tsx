@@ -41,7 +41,7 @@ const Header = ({ project }: Props) => {
       className="w-full min-h-[50vh] pt-desktop pb-mobile px-mobile md:px-tabler lg:px-desktop relative"
       ref={container}
     >
-      <h5 className="text-[70px] md:text-[80px] lg:text-[90px] text-black font-medium uppercase w-full projectTitle leading-[90%]">
+      <h5 className="text-[65px] md:text-[80px] lg:text-[90px] text-black font-medium uppercase w-full projectTitle leading-[90%]">
         {t(`${project}.info.title`)} <br /> ©{t(`${project}.info.date`)}
       </h5>
     </div>

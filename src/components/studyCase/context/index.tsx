@@ -78,6 +78,7 @@ const Context = ({ project }: Props) => {
           title={t("studyCases.text.context.team")}
           text={t(`${project}.studyCase.meet`)}
           hasButton
+          pageUrl={t(`${project}.studyCase.pageUrl`)}
         />
         <Item
           title={t("studyCases.text.context.background")}

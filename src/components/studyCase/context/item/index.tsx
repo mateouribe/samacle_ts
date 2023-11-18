@@ -9,9 +9,10 @@ type Props = {
   title: string;
   text: string;
   hasButton?: boolean;
+  pageUrl?: string;
 };
 
-const Item = ({ title, text, hasButton = false }: Props) => {
+const Item = ({ title, text, hasButton = false, pageUrl }: Props) => {
   const container = useRef(null);
   const { t } = useTranslation();
 
@@ -54,7 +55,16 @@ const Item = ({ title, text, hasButton = false }: Props) => {
         <div className="w-full md:w-[70%] flex flex-col gap-50 contextContainer">
           <span className="text-sm text-main md:hidden">{title}</span>
           <p className="text-black w-full md:w-[90%] text-left">{text}</p>
-          {hasButton && <Button icon="eye">{t("button.visitSite")}</Button>}
+          {hasButton && (
+            <Button
+              icon="eye"
+              onClick={() => {
+                window.open(pageUrl, "_blank");
+              }}
+            >
+              {t("button.visitSite")}
+            </Button>
+          )}
         </div>
         <LineTitle title={title} />
       </div>
