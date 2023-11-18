@@ -17,9 +17,6 @@ const Hero = () => {
       wordClass: "wordsParent",
     });
 
-    gsap.set(".followGroup", {
-      opacity: 0,
-    });
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({});
 
@@ -52,19 +49,6 @@ const Hero = () => {
           ease: Expo.easeInOut,
         },
         "-=2"
-      );
-      tl.fromTo(
-        ".followGroup",
-        {
-          opacity: 0,
-          scale: 0.8,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-        },
-        "-=1.5"
       );
     }, container);
 

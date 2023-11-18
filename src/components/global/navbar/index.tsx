@@ -389,7 +389,7 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-          <ul className="flex gap-20 text-white pb-[70px]">
+          <ul className="flex gap-20 text-white pb-desktop">
             <li
               className={`mobileItem ${
                 currentLanguage !== "en" ? "text-white opacity-70" : "text-main"
@@ -422,17 +422,6 @@ const Navbar = () => {
               }}
             >
               ES
-            </li>
-            <li
-              className={`mobileItem ${
-                currentLanguage === "hi" ? "text-main" : "text-white opacity-70"
-              }`}
-              onClick={() => {
-                changeLanguage("hi");
-                onClickBurgerMenu();
-              }}
-            >
-              HI
             </li>
           </ul>
         </div>

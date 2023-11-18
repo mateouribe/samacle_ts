@@ -10,13 +10,15 @@ import {
 import Navbar from "./components/global/navbar";
 import Footer from "./components/global/footer";
 import AnimatedCursor from "react-animated-cursor";
-import { isDesktop } from "framer/utils/environment.js";
+import { useStatesContext } from "./context/StatesProvider";
 
 function App() {
   const location = useLocation();
+  const { isDesktop } = useStatesContext();
+
   return (
     <>
-      {isDesktop() && (
+      {isDesktop && (
         <AnimatedCursor
           innerSize={12}
           outerSize={20}
