@@ -386,7 +386,7 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-          <ul className="flex gap-20 text-white">
+          <ul className="flex gap-20 text-white pb-[70px]">
             <li
               className={`mobileItem ${
                 currentLanguage !== "en" ? "text-white opacity-70" : "text-main"

@@ -37,66 +37,70 @@ const Services = () => {
     gsap.set(slidePicWorks, { autoAlpha: 0 });
 
     const ctx = gsap.context(() => {
-      // Animations for mouse over
-      elementsWorks.forEach((element, index) => {
-        element.addEventListener("mouseenter", function () {
-          gsap.to(slidePicsWorks, {
-            marginTop: `-${280 * index}px`,
-            duration: 0.1,
+      if (isDesktop) {
+        // Animations for mouse over
+        elementsWorks.forEach((element, index) => {
+          element.addEventListener("mouseenter", function () {
+            gsap.to(slidePicsWorks, {
+              marginTop: `-${280 * index}px`,
+              duration: 0.1,
+              ease: "power1",
+            });
+          });
+
+          element.addEventListener("mouseleave", function () {
+            gsap.to(element, {
+              color: "initial",
+              duration: 10,
+              ease: "power1",
+            });
+          });
+        });
+
+        window.addEventListener("mousemove", function (e) {
+          gsap.to(slidePicWorks, {
+            top: `${e.clientY}px`,
+            left: `${e.clientX}px`,
+            xPercent: -20,
+            yPercent: -45,
+            duration: 0.2,
             ease: "power1",
           });
         });
 
-        element.addEventListener("mouseleave", function () {
-          gsap.to(element, { color: "initial", duration: 10, ease: "power1" });
-        });
-      });
+        const itemsService = document.querySelector(".items-service");
+        //On enter container show image
 
-      window.addEventListener("mousemove", function (e) {
-        gsap.to(slidePicWorks, {
-          top: `${e.clientY}px`,
-          left: `${e.clientX}px`,
-          xPercent: -20,
-          yPercent: -45,
-          duration: 0.2,
-          ease: "power1",
-        });
-      });
-
-      const itemsService = document.querySelector(".items-service");
-      //On enter container show image
-
-      if (itemsService) {
-        itemsService.addEventListener("mouseenter", function () {
-          gsap.to(slidePicWorks, {
-            autoAlpha: 1,
-            duration: 0,
-            ease: Expo.easeInOut,
+        if (itemsService) {
+          itemsService.addEventListener("mouseenter", function () {
+            gsap.to(slidePicWorks, {
+              autoAlpha: 1,
+              duration: 0,
+              ease: Expo.easeInOut,
+            });
+            gsap.fromTo(
+              slidePicWorks,
+              {
+                scale: 2,
+                clipPath: "circle(10px at 50% 50%)",
+              },
+              {
+                scale: 1,
+                clipPath: "circle(100% at 50% 50%)",
+              }
+            );
           });
-          gsap.fromTo(
-            slidePicWorks,
-            {
-              scale: 2,
+
+          itemsService.addEventListener("mouseleave", function () {
+            gsap.to(slidePicWorks, {
+              autoAlpha: 0,
+              duration: 0,
               clipPath: "circle(10px at 50% 50%)",
-            },
-            {
-              scale: 1,
-              clipPath: "circle(100% at 50% 50%)",
-            }
-          );
-        });
-
-        itemsService.addEventListener("mouseleave", function () {
-          gsap.to(slidePicWorks, {
-            autoAlpha: 0,
-            duration: 0,
-            clipPath: "circle(10px at 50% 50%)",
-            ease: Expo.easeInOut,
+              ease: Expo.easeInOut,
+            });
           });
-        });
+        }
       }
-
-      //On leave container hide image
 
       // Animations for scroll
 

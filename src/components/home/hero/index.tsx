@@ -80,12 +80,13 @@ const Hero = () => {
         <h2
           className="text-black text-[56px] md:text-[76px] lg:text-[96px] leading-[100%] text-left overflow-hidden z-[100] relative font-extrabold px-mobile md:px-tablet lg:px-desktop "
           id="heroText"
-        >
-          {t("home.welcomeMessage.firstLine")}
-          <br />
-          {t("home.welcomeMessage.secondLine")}
-        </h2>
-        <div className="w-full h-full bg-red-100">
+          dangerouslySetInnerHTML={{
+            __html:
+              t("home.welcomeMessage.firstLine") +
+              t("home.welcomeMessage.secondLine"),
+          }}
+        ></h2>
+        <div className="w-full h-full">
           <Image image={homeHeroImage} onLoad noHover />
         </div>
       </Section>

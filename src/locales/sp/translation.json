@@ -10,7 +10,10 @@
     "promotionFooter": "Obtenga un 10% de descuento en su próximo proyecto Suscríbete a nuestro boletín."
   },
   "home": {
-    "welcomeMessage": "Diseñando sueños \nEntregando resutados.",
+    "welcomeMessage": {
+      "firstLine": "Diseñando sueños,<br/>",
+      "secondLine": "Entregando resutados."
+    },
     "ourMission": "Somos una agencia ubicada en Waterloo, ON dedicada al desarrollo y diseño de sitios web para empresas emergentes y de tamaño medio. Nuestra misión es entregar sitios web dinámicos con mecánicas atractivas e intuitivas que generen un impacto en el futuro del negocio de cada uno de nuestros clientes.",
     "whyUs": {
       "title": "¿Por qué elegirnos?",

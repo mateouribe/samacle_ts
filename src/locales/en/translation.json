@@ -11,8 +11,8 @@
   },
   "home": {
     "welcomeMessage": {
-      "firstLine": "Designing Dreams",
-      "secondLine": "Delivering Results"
+      "firstLine": "Designing Dreams,<br/>",
+      "secondLine": "Delivering Results."
     },
     "ourMission": "We are an agency in Waterloo, ON dedicated to developing and designing websites for emerging and mid-market businesses. Our mission is to deliver dynamic websites with attractive and intuitive mechanics that generate an impact on the future of the business of each of our clients.",
     "whyUs": {

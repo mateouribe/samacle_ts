@@ -10,7 +10,10 @@
     "promotionFooter": "Profitez d'une remise de 10% sur votre prochain projet! Abonnez-vous à notre newsletter."
   },
   "home": {
-    "welcomeMessage": "Création de rêves,<br/>Livraison de résultats.",
+    "welcomeMessage": {
+      "firstLine": "Création de rêves,<br/>",
+      "secondLine": "Livraison de résultats."
+    },
     "ourMission": "Nous sommes une agence basée à Waterloo, en Ontario, spécialisée dans le développement et la conception de sites web pour les entreprises émergentes et de taille moyenne. Notre mission est de créer des sites web dynamiques avec des mécanismes attrayants et intuitifs qui génèrent un impact sur l'avenir de l'activité de chacun de nos clients.",
     "whyUs": {
       "title": "Pourquoi nous choisir?",

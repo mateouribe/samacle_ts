@@ -10,19 +10,20 @@ import {
 import Navbar from "./components/global/navbar";
 import Footer from "./components/global/footer";
 import AnimatedCursor from "react-animated-cursor";
+import { isDesktop } from "framer/utils/environment.js";
 
 function App() {
   const location = useLocation();
   return (
     <>
-      <AnimatedCursor
-        innerSize={12}
-        outerSize={20}
-        color="239, 78, 38"
-        outerAlpha={0.2}
-        // innerScale={0.7}
-        // outerScale={5}
-      />
+      {isDesktop() && (
+        <AnimatedCursor
+          innerSize={12}
+          outerSize={20}
+          color="239, 78, 38"
+          outerAlpha={0.2}
+        />
+      )}
       <Navbar />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
