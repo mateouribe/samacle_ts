@@ -5,21 +5,17 @@ import { colors } from "../../../utils/constants";
 import { Expo, gsap } from "gsap";
 import { useTranslation } from "react-i18next";
 import hero from "../../../assets/images/orange_process.png";
+import SplitType from "split-type";
 
 const Hero = () => {
   const container = useRef(null);
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText("#heroText", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText("#heroText", {
-      type: "words, chars",
-      charsClass: "wordsBlack swearFont",
+    const splitTitle = new SplitType("#heroText", {
+      types: ["words", "chars"],
+      charClass: "blackWords swearFont ",
+      wordClass: "wordsParent",
     });
 
     gsap.set(".followGroup", {

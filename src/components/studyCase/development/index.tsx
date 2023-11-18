@@ -4,6 +4,7 @@ import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import Item from "./item";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,30 +26,16 @@ const Development = ({ project, item }: Props) => {
 
   useLayoutEffect(() => {
     if (isLoaded) {
-      const splitTitleParent = new (window as any).SplitText(
-        ".developmentTitle",
-        {
-          type: "words, chars",
-          chars: "chars",
-          charsClass: "wordsParent",
-        }
-      );
-
-      const splitTitle = new (window as any).SplitText(".developmentTitle", {
-        type: "words, chars",
-        charsClass: "blackWords",
+      const splitTitle = new SplitType(".developmentTitle", {
+        types: ["words", "chars"],
+        charClass: "blackWords",
+        wordClass: "wordsParent",
       });
 
-      const splitChallengesParent = new (window as any).SplitText(
-        ".challenge_text",
-        {
-          type: "words, lines",
-          linesClass: "wordsParent",
-        }
-      );
-
-      const splitChallenges = new (window as any).SplitText(".challenge_text", {
-        type: "words, lines",
+      //TODO: Check if inline works
+      const splitChallenges = new SplitType(".developmentTitle", {
+        types: ["words", "lines"],
+        lineClass: "wordsParent",
       });
 
       const ctx = gsap.context(() => {

@@ -11,7 +11,7 @@ import Services from "../../components/home/services";
 import Projects from "../../components/home/projects";
 import Contact from "../../components/home/contact";
 import SectionTitle from "../../components/customElements/sectionTitle";
-import Transition from "../../components/global/transition";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,15 +19,10 @@ const Home = () => {
   const container = useRef(null);
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".whyUs", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".whyUs", {
-      type: "words, chars",
-      charsClass: "blackWords",
+    const splitTitle = new SplitType(".whyUs", {
+      types: ["words", "chars"],
+      charClass: "blackWords",
+      wordClass: "wordsParent",
     });
 
     const body = document.querySelector("body");

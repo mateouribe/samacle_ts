@@ -4,6 +4,7 @@ import Item from "./item";
 import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
@@ -15,13 +16,9 @@ const Context = ({ project }: Props) => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".ctxTitle", {
-      type: "words, lines",
-      linesClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".ctxTitle", {
-      type: "words, lines",
+    const splitTitle = new SplitType(".ctxTitle", {
+      types: ["words", "lines"],
+      lineClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {

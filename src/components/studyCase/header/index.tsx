@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap, Expo } from "gsap";
 import { useTranslation } from "react-i18next";
+import SplitType from "split-type";
 type Props = {
   project: string;
 };
@@ -10,15 +11,10 @@ const Header = ({ project }: Props) => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".projectTitle", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".projectTitle", {
-      type: "words, chars",
-      charsClass: "wordsBlack",
+    const splitTitle = new SplitType(".projectTitle", {
+      types: ["words", "chars"],
+      charClass: "blackWords ",
+      wordClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {

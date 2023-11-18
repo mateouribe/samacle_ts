@@ -5,21 +5,17 @@ import { useTranslation } from "react-i18next";
 import Image from "../../customElements/image";
 import Section from "../../customElements/section";
 import rocker_services from "../../../assets/images/rocket_services.png";
+import SplitType from "split-type";
 
 const Hero = () => {
   const container = useRef(null);
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText("#servicesText", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText("#servicesText", {
-      type: "words, chars",
-      charsClass: "wordsBlack swearFont",
+    const splitTitle = new SplitType("#servicesText", {
+      types: ["words", "chars"],
+      charClass: "blackWords swearFont ",
+      wordClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {

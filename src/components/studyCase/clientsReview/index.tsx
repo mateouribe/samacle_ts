@@ -13,7 +13,6 @@ const ClientsReview = ({ project }: Props) => {
   const container = useRef(null);
   const { t } = useTranslation();
 
-  //TODO: Create client review on locales
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({

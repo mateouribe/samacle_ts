@@ -10,7 +10,7 @@ const Hero = () => {
   useLayoutEffect(() => {
     const splitTitle = new SplitType("#aboutTitle", {
       types: ["words", "chars"],
-      charClass: "wordsBlack swearFont ",
+      charClass: "blackWords swearFont ",
       wordClass: "wordsParent",
     });
 

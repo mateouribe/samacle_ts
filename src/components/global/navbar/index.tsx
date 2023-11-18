@@ -323,11 +323,13 @@ const Navbar = () => {
         ref={mobileContainer}
       >
         {/* Burger */}
+
         <img
           src={icon}
           alt="A small black-colored icon representing Samacle - Web Agency in Canada for mobile devices, positioned in the header of the web page."
           className="w-[134px] blacklogo bg-white rounded-full p-10"
           loading="lazy"
+          onClick={() => (window.location.href = "/")}
         />
         <div
           className="w-[50px] h-[50px] border-[3px] border-black flex flex-col justify-center items-center gap-[5px] rounded-full z-[9999] burgerCircle"

@@ -13,6 +13,7 @@ import Section from "../../customElements/section/index.js";
 import website from "../../../assets/images/website.png";
 import seo from "../../../assets/images/seo.png";
 import mail from "../../../assets/images/mail.png";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,15 +23,10 @@ const Services = () => {
   const { isDesktop } = useStatesContext();
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".servicesTitle", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".servicesTitle", {
-      type: "words, chars",
-      charsClass: "beigeWords",
+    const splitTitle = new SplitType(".servicesTitle", {
+      types: ["words", "chars"],
+      charClass: "beigeWords",
+      wordClass: "wordsParent",
     });
 
     const elementsWorks: Array<HTMLDivElement> =

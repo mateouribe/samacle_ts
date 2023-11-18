@@ -5,9 +5,9 @@ import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { colors, projects } from "../../../utils/constants";
 import { changeBgColorAnimation } from "../../../utils/gsapAnimations";
-// import SplitText from "../../../utils/Split3.min.js";
 import Item from "./item";
 import { useTranslation } from "react-i18next";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -16,15 +16,10 @@ const Projects = () => {
   const leading = 39;
 
   useLayoutEffect(() => {
-    const splitTitleParent = new (window as any).SplitText(".projectTitle", {
-      type: "words, chars",
-      chars: "chars",
-      charsClass: "wordsParent",
-    });
-
-    const splitTitle = new (window as any).SplitText(".projectTitle", {
-      type: "words, chars",
-      charsClass: "orangeWords",
+    const splitTitle = new SplitType(".projectTitle", {
+      types: ["words", "chars"],
+      charClass: "orangeWords",
+      wordClass: "wordsParent",
     });
 
     const ctx = gsap.context(() => {

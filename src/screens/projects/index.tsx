@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Item from "../../components/projects/item";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -14,32 +15,28 @@ const Projects = () => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const itemsTitle: string[][] = [];
+    const items = document.getElementsByClassName(
+      "projectsPageTitle"
+    ) as HTMLCollectionOf<HTMLElement>;
 
-    // Split title
-    gsap.utils.toArray(".projectsPageTitle").forEach((el) => {
-      const splitTitleParent = new (window as any).SplitText(el, {
-        type: "words",
-        wordsClass: "wordsParent",
+    const itemsTitle: HTMLElement[][] = [];
+
+    Array.from(items).forEach((item: HTMLElement) => {
+      const split = new SplitType(item, {
+        types: ["words"],
       });
 
-      const splitTitle = new (window as any).SplitText(el, {
-        type: "words",
-        wordsClass: "wordsBlack",
-      });
-
-      itemsTitle.push(splitTitle.words);
+      if (
+        split.words !== null &&
+        split.words !== undefined &&
+        split.words.length > 0
+      ) {
+        itemsTitle.push(split.words);
+      }
     });
 
-    //Split text
-    const splitTextParent = new (window as any).SplitText(".projectPageText", {
-      type: "words",
-      wordsClass: "wordsParent",
-    });
-
-    const splitText = new (window as any).SplitText(".projectPageText", {
-      type: "words",
-      wordsClass: "wordsBlack",
+    const welcomeMessage = new SplitType(".projectPageText", {
+      types: "words",
     });
 
     const body = document.querySelector("body");
@@ -65,7 +62,7 @@ const Projects = () => {
         }
       );
       tl.fromTo(
-        splitText.words,
+        welcomeMessage.words,
         {
           y: 48,
         },
@@ -112,19 +109,19 @@ const Projects = () => {
         <div className="flex items-center justify-between w-full">
           <div>
             <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle"
+              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
               text={t("projects.welcomeMessage.one")}
             ></SectionTitle>
             <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle"
+              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
               text={t("projects.welcomeMessage.two")}
             ></SectionTitle>
             <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle"
+              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
               text={t("projects.welcomeMessage.three")}
             ></SectionTitle>
           </div>
-          <p className="w-[70%] md:w-[50%] lg:w-[30%] text-black projectPageText leading-[90%]">
+          <p className="w-[70%] md:w-[50%] lg:w-[30%] text-black projectPageText leading-[90%] wordsParent">
             {t("projects.welcomeMessage.text")}
           </p>
         </div>
