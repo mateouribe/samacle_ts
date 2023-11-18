@@ -1,11 +1,10 @@
 import { useLayoutEffect, useRef } from "react";
 import Section from "../../customElements/section";
-import { AiOutlineBehance, AiOutlineInstagram } from "react-icons/ai";
-import { colors } from "../../../utils/constants";
 import { Expo, gsap } from "gsap";
 import { useTranslation } from "react-i18next";
-import hero from "../../../assets/images/orange_process.png";
 import SplitType from "split-type";
+import Image from "../../customElements/image";
+import homeHeroImage from "../../../assets/images/homeHeroImg.png";
 
 const Hero = () => {
   const container = useRef(null);
@@ -14,7 +13,7 @@ const Hero = () => {
   useLayoutEffect(() => {
     const splitTitle = new SplitType("#heroText", {
       types: ["words", "chars"],
-      charClass: "blackWords swearFont ",
+      charClass: "blackWords ",
       wordClass: "wordsParent",
     });
 
@@ -33,7 +32,7 @@ const Hero = () => {
           y: 0,
           duration: 2,
           ease: Expo.easeInOut,
-          stagger: 0.03,
+          stagger: 0.02,
         }
       );
       tl.to(
@@ -77,47 +76,17 @@ const Hero = () => {
       <Section
         className="pt-[100px] md:pt-[200px] lg:pt-[55px] overflow-hidden relative"
         fullHeightNav
-        hasPadding
       >
         <h2
-          className="text-black font-swearDisplay text-[80px] md:text-[100px] lg:text-[120px] xl:text-[130px] leading-[99%] text-left overflow-hidden z-[100] relative"
+          className="text-black text-[56px] md:text-[76px] lg:text-[96px] leading-[100%] text-left overflow-hidden z-[100] relative font-extrabold px-mobile md:px-tablet lg:px-desktop "
           id="heroText"
-          dangerouslySetInnerHTML={{ __html: t("home.welcomeMessage") }}
-        ></h2>
-
-        <figure className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[50%] lg:w-[40%] lg:h-[50%] h-[50%] origin-bottom z-[10]">
-          <div className="relative w-full h-full">
-            <div className="w-[calc(100%+20px)] h-full absolute top-0 left-1/2 transform -translate-x-1/2 bg-white z-[9] origin-top slideOut overflow-hidden" />
-            <div className="relative w-full h-full overflow-hidden">
-              <div
-                className="w-full h-full absolute top-0 left-0 z-[5] coverImage"
-                style={{
-                  backgroundImage: `url(${hero})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-            </div>
-          </div>
-        </figure>
-
-        <div className="absolute right-[10px] md:right-[20px] lg.right-[30px] bottom-[50px] lg:bottom-[100px] flex flex-col justify-center items-center gap-10 followGroup">
-          <span
-            className="text-[10px] text-main"
-            style={{
-              writingMode: "vertical-rl",
-              textOrientation: "upright",
-              whiteSpace: "nowrap",
-            }}
-          >
-            FOLLOW US
-          </span>
-          <div className="w-[1px] h-[30px] bg-main" />
-          <div className="flex flex-col gap-5">
-            <AiOutlineInstagram size={15} color={colors.main} />
-            <AiOutlineBehance size={15} color={colors.main} />
-          </div>
+        >
+          {t("home.welcomeMessage.firstLine")}
+          <br />
+          {t("home.welcomeMessage.secondLine")}
+        </h2>
+        <div className="w-full h-full bg-red-100">
+          <Image image={homeHeroImage} onLoad noHover />
         </div>
       </Section>
     </div>
