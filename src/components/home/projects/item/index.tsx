@@ -45,7 +45,7 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
 
   return (
     <div
-      className={`w-full h-[70vh] md:h-[80vh] md:col-span-12 flex ${
+      className={`w-full h-[70vh] md:h-[80vh] lg:col-span-12 flex ${
         alignLeft ? "justify-start" : "justify-end"
       }`}
       ref={container}
