@@ -10,7 +10,11 @@ import { useTranslation } from "react-i18next";
 import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => {
+type Props = {
+  hasTitle?: boolean;
+};
+
+const Projects = ({ hasTitle = true }: Props) => {
   const container = useRef(null);
   const { t } = useTranslation();
   const leading = 39;
@@ -38,8 +42,8 @@ const Projects = () => {
       });
       ScrollTrigger.create({
         trigger: container.current,
-        start: "top 70%",
-        end: "bottom 70%",
+        start: "top 80%",
+        end: "bottom 80%",
         animation: gsap.fromTo(
           splitTitle.chars,
           {
@@ -61,13 +65,17 @@ const Projects = () => {
   return (
     <div ref={container}>
       <Section
-        hasPadding
-        className="flex flex-col gap-50 min-h-[100vh] projects-bg-trigger"
+        className={`flex flex-col gap-50 min-h-[100vh] projects-bg-trigger ${
+          hasTitle ? "p-mobile md:p-tablet lg:p-desktop" : "p-0"
+        }`}
       >
         <SectionTitle
-          className={`projectTitle text-main leading-[${leading}px]`}
+          className={`projectTitle text-main leading-[${leading}px] font-medium ${
+            hasTitle ? "block" : "hidden"
+          }`}
           text={t("home.projects.title")}
         ></SectionTitle>
+
         <div className="grid w-full h-full grid-cols-1 gap-100 md:gap-50 lg:grid-cols-12 ">
           {projects.map((project, index) =>
             index === 0 ? (

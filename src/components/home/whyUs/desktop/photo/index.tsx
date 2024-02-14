@@ -6,7 +6,7 @@ type Props = {
 const Photo = ({ image, color }: Props) => {
   return (
     <div
-      className="desktopPhoto absolute w-full lg:w-[80%] h-full"
+      className="desktopPhoto absolute w-full lg:w-[80%] h-full right-0"
       style={{
         background: `linear-gradient(180deg, ${color.split(" ")[0]} 0%, ${
           color.split(" ")[1]

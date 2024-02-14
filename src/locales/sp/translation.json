@@ -4,7 +4,7 @@
     "services": "Servicios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "projects": "Projectos"
+    "projects": "Proyectos"
   },
   "footer": {
     "promotionFooter": "Obtenga un 10% de descuento en su próximo proyecto Suscríbete a nuestro boletín."
@@ -12,7 +12,7 @@
   "home": {
     "welcomeMessage": {
       "firstLine": "Diseñando sueños,<br/>",
-      "secondLine": "Entregando resutados."
+      "secondLine": "Entregando resultados."
     },
     "ourMission": "Somos una agencia ubicada en Waterloo, ON dedicada al desarrollo y diseño de sitios web para empresas emergentes y de tamaño medio. Nuestra misión es entregar sitios web dinámicos con mecánicas atractivas e intuitivas que generen un impacto en el futuro del negocio de cada uno de nuestros clientes.",
     "whyUs": {
@@ -40,7 +40,10 @@
     }
   },
   "services": {
-    "welcomeMessage": "Creemos en su éxito: Presentamos nuestros servicios de potenciación de marca",
+    "welcomeMessage": {
+      "top": "Creamos su sinfonía digital:",
+      "bottom": "Eleve su marca"
+    },
     "stats": {
       "statOne": "El 97% de los consumidores buscan empresas locales en Internet. <span class='orangeText'>Tener un sitio web garantiza que su empresa se pueda descubrir.</span>",
       "statTwo": "Pequeñas empresas con presencia en línea y un sitio web <span class='orangeText'>crecen un 40% más rápido</span> que los que no lo hacen.",
@@ -54,15 +57,15 @@
         "description": "Nuestro servicio de diseño y desarrollo web es la piedra angular de la creación de identidades digitales cautivadoras para empresas de diversos sectores. No nos limitamos a crear sitios web, sino que los diseñamos para obtener resultados. Nuestro equipo de diseñadores y desarrolladores especializados colabora estrechamente con usted para comprender su visión y sus objetivos, asegurándose de que cada píxel y cada línea de código sirvan para algo. Tanto si necesita un sitio web impresionante desde cero como si desea renovar su presencia en línea actual, nuestros expertos convertirán sus ideas en una plataforma digital visualmente impactante, fácil de usar y de alto rendimiento que atraiga a su público y genere conversiones."
       },
       "service2": {
-        "title": "Optimización de motores de búsqueda (SEO)",
+        "title": "Marketing",
         "subtitle": "",
-        "shortDescription": "Libere el verdadero potencial del tráfico de búsqueda orgánico con nuestras estrategias SEO basadas en datos. <i class='orangeText'>Utilizamos las últimas herramientas y conocimientos del sector para optimizar el posicionamiento de su sitio web en los motores de búsqueda, lo que genera un flujo constante de tráfico dirigido a su sitio.</i>",
+        "shortDescription": "Aproveche el poder de las campañas de correo electrónico para nutrir a los clientes potenciales y mantener las relaciones con ellos. Nuestro equipo de expertos le ayudará a crear y ejecutar estrategias de marketing por correo electrónico que impulsen las conversiones y aumenten los ingresos.",
         "description": "En el vasto panorama digital, la visibilidad es la clave del éxito. Nuestro servicio de optimización para motores de búsqueda (SEO) está diseñado para impulsar su marca a la vanguardia de los resultados de los motores de búsqueda, garantizando que los clientes potenciales le encuentren antes que sus competidores. Con un profundo conocimiento de los algoritmos de los motores de búsqueda y de las últimas tendencias del sector, nuestros expertos en SEO emplean estrategias probadas para optimizar el posicionamiento de su sitio web y mejorar su autoridad en línea. Analizamos meticulosamente las palabras clave, optimizamos los elementos de la página y creamos vínculos de retroceso de alta calidad para impulsar su tráfico orgánico y aumentar su presencia en Internet. Con nuestra experiencia en SEO, su negocio puede obtener la visibilidad en línea que se merece, generando más tráfico cualificado y, en última instancia, mayores ingresos."
       },
       "service3": {
-        "title": "Marketing por correo electrónico",
+        "title": "Branding",
         "subtitle": "",
-        "shortDescription": "Aproveche el poder de las campañas de correo electrónico para nutrir a los clientes potenciales y mantener las relaciones con ellos. <i class='orangeText'>Nuestro equipo de expertos le ayudará a crear y ejecutar estrategias de marketing por correo electrónico que impulsen las conversiones y aumenten los ingresos.</i>",
+        "shortDescription": "Libere el verdadero potencial del tráfico de búsqueda orgánico con nuestras estrategias SEO basadas en datos. Utilizamos las últimas herramientas y conocimientos del sector para optimizar el posicionamiento de su sitio web en los motores de búsqueda, lo que genera un flujo constante de tráfico dirigido a su sitio.",
         "description": "Aproveche el poder de la comunicación personalizada y el compromiso con nuestro servicio de Email Marketing. En nuestra agencia digital, somos conscientes de que el correo electrónico sigue siendo una de las herramientas más eficaces para establecer relaciones con su público e impulsar las conversiones. Nuestros expertos en marketing por correo electrónico elaboran campañas atractivas y personalizadas que resuenan con su público objetivo. Segmentamos su lista de correo electrónico para garantizar que el mensaje correcto llegue a las personas adecuadas en el momento oportuno, aumentando las tasas de apertura y de clics. Desde diseños llamativos hasta textos persuasivos, nos aseguramos de que cada correo electrónico que enviamos represente los valores y objetivos de su marca. Con nuestro servicio de marketing por correo electrónico, podrá fidelizar a sus clientes potenciales y conseguir un importante retorno de la inversión, al tiempo que establece conexiones duraderas con su público."
       }
     }

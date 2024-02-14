@@ -5,7 +5,7 @@ const Stadistics = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full h-full px-mobile pt-[5px] md:px-tablet lg:px-desktop grid grid-cols-1 md:grid-cols-3 gap-50">
+    <div className="w-full h-full px-mobile pt-[20px] md:px-tablet lg:px-desktop grid grid-cols-1 md:grid-cols-3 gap-50 mb-100">
       <Card title="97%" text={t("services.stats.statOne")} />
       <Card title="40%" text={t("services.stats.statTwo")} />
       <Card title="x3" text={t("services.stats.statThree")} />

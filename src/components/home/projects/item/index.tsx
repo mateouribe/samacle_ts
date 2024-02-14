@@ -14,7 +14,7 @@ type Props = {
 const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
   const positions = isFirstOne
     ? { start: "top 62.5%", end: "bottom 62.5%" }
-    : { start: "top 70%", end: "bottom 70%" };
+    : { start: "top 90%", end: "bottom 90%" };
 
   const container = useRef(null);
 
@@ -62,7 +62,10 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
           <div className="relative w-full h-full overflow-hidden">
             <Image
               image={project.image}
-              position={positions}
+              position={{
+                start: "top 120%",
+                end: "bottom 120%",
+              }}
               onLoad={!project.completed && true}
               noHover={!project.completed && true}
             />

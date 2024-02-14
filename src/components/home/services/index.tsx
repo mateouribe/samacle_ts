@@ -31,13 +31,13 @@ const Services = () => {
 
     const elementsWorks: Array<HTMLDivElement> =
       gsap.utils.toArray(".item-service");
-    const slidePicWorks = gsap.utils.toArray("#gallery-services");
-    const slidePicsWorks = gsap.utils.toArray("#services-images");
-
-    gsap.set(slidePicWorks, { autoAlpha: 0 });
 
     const ctx = gsap.context(() => {
-      if (isDesktop) {
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 1024px)", () => {
+        const slidePicWorks = gsap.utils.toArray("#gallery-services");
+        const slidePicsWorks = gsap.utils.toArray("#services-images");
+        gsap.set(slidePicWorks, { autoAlpha: 0 });
         // Animations for mouse over
         elementsWorks.forEach((element, index) => {
           element.addEventListener("mouseenter", function () {
@@ -100,7 +100,7 @@ const Services = () => {
             });
           });
         }
-      }
+      });
 
       // Animations for scroll
 
@@ -120,8 +120,8 @@ const Services = () => {
 
       ScrollTrigger.create({
         trigger: container.current,
-        start: "top 60%",
-        end: "bottom 60%",
+        start: "top 90%",
+        end: "bottom 90%",
         animation: gsap.fromTo(
           splitTitle.chars,
           {
@@ -147,14 +147,14 @@ const Services = () => {
         className="flex flex-col gap-50 min-h-[100vh] sevices-bg-trigger"
       >
         <SectionTitle
-          className="servicesTitle text-beige leading-[30px]"
+          className="servicesTitle text-beige leading-[30px] font-medium"
           text={t("home.services.title")}
         ></SectionTitle>
         <section className="relative flex flex-col services">
           <div className="w-full m-auto container-services">
             <div className="flex flex-col w-full h-full content-services">
               {/* header */}
-              <div className="w-full grid grid-cols-2 pb-10 border-b-[1px] border-white gap-20 ">
+              <div className="w-full hidden lg:grid grid-cols-2 pb-10 border-b-[1px] border-white gap-20 ">
                 <div className="w-full h-full">
                   <span className="text-white text-xsm">
                     ({t("home.services.tableHeaderOne")})

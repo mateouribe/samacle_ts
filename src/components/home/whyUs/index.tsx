@@ -43,7 +43,7 @@ const WhyUse = () => {
 
   return (
     <div ref={container}>
-      <div className="relative flex w-full gallery">
+      <div className="relative flex w-full gallery justify-between">
         {/* Left side */}
         <div className="w-1/2 left outline-1">
           {/* Desktop content */}
@@ -102,7 +102,7 @@ const WhyUse = () => {
             />
           </div>
           {/* <!-- desktop content --> */}
-          <div className="photos w-[100%] h-[40vw] relative overflow-hidden">
+          <div className="photos w-full h-[40vw] relative overflow-hidden">
             <Photo image={blue} color="#94EFF9 #1BB7C8 #229AB2" />
             <Photo image={orange} color="#FFE2C2 #FF9F35 #CF7A1B" />
             <Photo image={pink} color="#FEB6CC #DF3866 #AA2147" />

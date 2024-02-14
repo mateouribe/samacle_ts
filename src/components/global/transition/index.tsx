@@ -1,32 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { useStatesContext } from "../../../context/StatesProvider";
 
-const Transition: React.FC<{ OgComponent: React.ComponentType }> = ({
-  OgComponent,
-}) => {
-  function checkScreenWidth() {
-    const desktopSize = 1024; // The minimum screen width to be considered as a desktop
-    (window as any).isDesktop = window.innerWidth >= desktopSize;
-    window.scrollTo({ top: 0 });
-    // Use the isDesktop variable as needed in your application
-    // For example, you can conditionally render content or apply specific styles based on the screen size.
-  }
+// // Extend the Window interface to include the isDesktop property
+// interface CustomWindow extends Window {
+//   isDesktop?: boolean;
+// }
 
-  // Call the function initially and add an event listener for resizing
-  useEffect(() => {
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
+type Props = {
+  component: () => JSX.Element;
+};
 
-    return () => {
-      // Remove the event listener when the component unmounts
-      window.removeEventListener("resize", checkScreenWidth);
-    };
-  }, []);
+const Transition = ({ component }: Props) => {
+  const { isDesktop } = useStatesContext();
 
   return (
     <>
-      <OgComponent />
-      {(window as any).isDesktop ? (
+      {component()}
+
+      {isDesktop ? (
         <>
           <motion.div
             className="slide-in z-[9999]"

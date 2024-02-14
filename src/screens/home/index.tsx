@@ -30,8 +30,8 @@ const Home = () => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: ".whyUsTrigger",
-        start: "top 90%",
-        end: "bottom 90%",
+        start: "top 100%",
+        end: "bottom 100%",
         animation: gsap.fromTo(
           splitTitle.chars,
           {
@@ -68,7 +68,10 @@ const Home = () => {
       <Hero />
       <About />
       <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet whyUsTrigger ">
-        <SectionTitle className="text-black whyUs leading-[30px]" text={text} />
+        <SectionTitle
+          className="text-black whyUs leading-[30px] font-medium"
+          text={text}
+        />
       </div>
       <WhyUs />
       <Services />

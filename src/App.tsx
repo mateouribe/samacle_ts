@@ -11,22 +11,16 @@ import Navbar from "./components/global/navbar";
 import Footer from "./components/global/footer";
 import AnimatedCursor from "react-animated-cursor";
 import { useStatesContext } from "./context/StatesProvider";
+// import { AnimatePresence } from "framer-motion";
 
-function App() {
+const App: React.FC = () => {
   const location = useLocation();
   const { isDesktop } = useStatesContext();
 
   return (
     <>
-      {isDesktop && (
-        <AnimatedCursor
-          innerSize={12}
-          outerSize={20}
-          color="239, 78, 38"
-          outerAlpha={0.2}
-        />
-      )}
       <Navbar />
+      {/* <AnimatePresence mode="wait" initial={false}> */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/our-services" element={<Services />} />
@@ -35,9 +29,38 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
+      {/* </AnimatePresence> */}
+      {isDesktop && (
+        <AnimatedCursor
+          innerSize={12}
+          outerSize={20}
+          color="58, 58, 58"
+          outerAlpha={0.2}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            {
+              target: ".link",
+              color: "239, 78, 38",
+            },
+            {
+              target: ".link",
+              color: "239, 78, 38",
+            },
+          ]}
+        />
+      )}
       <Footer />
     </>
   );
-}
+};
 
 export default App;

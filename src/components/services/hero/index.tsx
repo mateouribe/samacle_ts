@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import Image from "../../customElements/image";
 import Section from "../../customElements/section";
-import rocker_services from "../../../assets/images/rocket_services.png";
+import services_main from "../../../assets/images/services_main.jpg";
 import SplitType from "split-type";
 
 const Hero = () => {
@@ -12,9 +12,14 @@ const Hero = () => {
   const { t } = useTranslation();
 
   useLayoutEffect(() => {
-    const splitTitle = new SplitType("#servicesText", {
+    const splitTitleTop = new SplitType("#servicesTextTop", {
       types: ["words", "chars"],
-      charClass: "blackWords swearFont ",
+      charClass: "blackWords",
+      wordClass: "wordsParent",
+    });
+    const splitTitleBottom = new SplitType("#servicesTextBottom", {
+      types: ["words", "chars"],
+      charClass: "",
       wordClass: "wordsParent",
     });
 
@@ -24,7 +29,7 @@ const Hero = () => {
       });
       const tl = gsap.timeline({});
       tl.fromTo(
-        splitTitle.chars,
+        [splitTitleTop.chars, splitTitleBottom.chars],
         {
           y: "150px",
         },
@@ -51,22 +56,25 @@ const Hero = () => {
 
   return (
     <div ref={container}>
-      <Section
-        fullHeightNav
-        className="flex flex-col items-end py-desktop md:pb-tablet md:pt-[100px] "
-      >
-        <h4
-          className="text-[20px] lg:text-[30px] font-swearDisplay leading-[95%] text-black text-right w-[80%] md:w-1/2 px-mobile md:px-tablet lg:px-desktop"
-          id="servicesText"
+      <Section>
+        <h2
+          className="text-black font-black text-[30px] md:text-[50px] lg:text-[70px] px-mobile md:px-tablet lg:px-desktop leading-[99.2%] mt-50"
+          id="servicesTextTop"
         >
-          {t("services.welcomeMessage")}
-        </h4>
+          {t("services.welcomeMessage.top")}
+        </h2>
+        <h2
+          className="text-black font-black text-[30px] md:text-[50px] lg:text-[70px] px-mobile md:px-tablet lg:px-desktop leading-[99.2%] mb-50"
+          id="servicesTextBottom"
+        >
+          {t("services.welcomeMessage.bottom")}
+        </h2>
         <div className="w-full h-[80vh] imgTriggerS">
           <div className="relative w-full h-full servicesMainImg">
-            <Image image={rocker_services} onLoad noHover />
+            <Image image={services_main} onLoad noHover />
           </div>
         </div>
-      </Section>{" "}
+      </Section>
     </div>
   );
 };
