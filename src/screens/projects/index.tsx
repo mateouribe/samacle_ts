@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import Section from "../../components/customElements/section";
 import SectionTitle from "../../components/customElements/sectionTitle";
 import { colors, projects } from "../../utils/constants";
@@ -8,11 +8,20 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Item from "../../components/projects/item";
 import SplitType from "split-type";
+import { useLenis } from "@studio-freight/react-lenis";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const container = useRef(null);
   const { t } = useTranslation();
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const items = document.getElementsByClassName(

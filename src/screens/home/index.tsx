@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { colors } from "../../utils/constants";
@@ -12,11 +12,19 @@ import Projects from "../../components/home/projects";
 import Contact from "../../components/home/contact";
 import SectionTitle from "../../components/customElements/sectionTitle";
 import SplitType from "split-type";
+import { useLenis } from "@studio-freight/react-lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const container = useRef(null);
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const splitTitle = new SplitType(".whyUs", {

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, FormEvent, useState } from "react";
+import { useLayoutEffect, useRef, FormEvent, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Section from "../../components/customElements/section";
 import SectionTitle from "../../components/customElements/sectionTitle";
@@ -13,6 +13,7 @@ import { colors } from "../../utils/constants";
 import Alert from "../../components/customElements/alert";
 import { useStatesContext } from "../../context/StatesProvider";
 import SplitType from "split-type";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const Contact = () => {
   const container = useRef(null);
@@ -20,6 +21,14 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const { setShowMessage } = useStatesContext();
   const [typeAlert, setTypeAlert] = useState<"success" | "error">("success");
+
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const splitTitle = new SplitType(".contactTitle", {

@@ -11,22 +11,38 @@ import Navbar from "./components/global/navbar";
 import Footer from "./components/global/footer";
 import AnimatedCursor from "react-animated-cursor";
 import { useStatesContext } from "./context/StatesProvider";
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
 const App: React.FC = () => {
   const location = useLocation();
   const { isDesktop } = useStatesContext();
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  });
 
   return (
     <>
       <Navbar />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/our-services" element={<Services />} />
-        <Route path="/our-projects" element={<Projects />} />
-        <Route path="/our-projects/study-case/:link" element={<StudyCase />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/contact-us" element={<Contact />} />
-      </Routes>
+      <ReactLenis
+        root
+        options={{
+          smoothWheel: true,
+          duration: 2,
+        }}
+      >
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-services" element={<Services />} />
+          <Route path="/our-projects" element={<Projects />} />
+          <Route
+            path="/our-projects/study-case/:link"
+            element={<StudyCase />}
+          />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/contact-us" element={<Contact />} />
+        </Routes>
+      </ReactLenis>
+
       {isDesktop && (
         <AnimatedCursor
           innerSize={12}

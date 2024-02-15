@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 // import Transition from "../components/Transition";
@@ -10,10 +10,18 @@ import { colors } from "../../utils/constants";
 import { Helmet } from "react-helmet-async";
 import Image from "../../components/customElements/image";
 import team_working from "../../assets/images/team_working.png";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const About = () => {
   const container = useRef(null);
   const { t } = useTranslation();
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const body = document.querySelector("body");

@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { colors } from "../../utils/constants";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
@@ -8,9 +8,17 @@ import Options from "../../components/services/options";
 import gsap from "gsap";
 import Section from "../../components/customElements/section";
 import Projects from "../../components/home/projects";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const Services = () => {
   const { t } = useTranslation();
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const body = document.querySelector("body");

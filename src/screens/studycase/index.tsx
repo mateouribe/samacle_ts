@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { colors, projects } from "../../utils/constants";
 import Header from "../../components/studyCase/header";
@@ -12,6 +12,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const StudyCase = () => {
   const { link } = useParams();
@@ -20,6 +21,13 @@ const StudyCase = () => {
   const container = useRef(null);
   const { t } = useTranslation();
   const item = useRef(null || `studyCases.projects.project${project?.id}`);
+  const lenis = useLenis(() => {
+    // called every scroll
+  });
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true, force: true });
+  }, [lenis]);
 
   useLayoutEffect(() => {
     const project = projects.find((project) => project.info.link === link);
