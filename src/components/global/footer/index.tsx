@@ -89,6 +89,11 @@ const Footer = () => {
                 </ATag>
               </li>
               <li className="text-sm font-light text-black">
+                <ATag href="tel:=15488812390" colorHover="#9E9E9E">
+                  +1 (548) 881-2390
+                </ATag>
+              </li>
+              <li className="text-sm font-light text-black">
                 <ATag href="/" colorHover="#9E9E9E">
                   Waterloo, ON, Canada.
                 </ATag>

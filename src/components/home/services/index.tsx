@@ -10,9 +10,9 @@ import Card from "./card";
 import Image from "./image";
 import SectionTitle from "../../customElements/sectionTitle";
 import Section from "../../customElements/section/index.js";
-import website from "../../../assets/images/website.png";
-import seo from "../../../assets/images/seo.png";
-import mail from "../../../assets/images/mail.png";
+import webDesign from "../../../assets/images/webDesign.png";
+import marketing from "../../../assets/images/marketing.png";
+import branding from "../../../assets/images/branding.jpeg";
 import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -183,9 +183,9 @@ const Services = () => {
                     transition: "all cubic-bezier(0.19, 1, 0.22, 1) 1s",
                   }}
                 >
-                  <Image image={website} />
-                  <Image image={seo} />
-                  <Image image={mail} />
+                  <Image image={webDesign} />
+                  <Image image={marketing} />
+                  <Image image={branding} />
                 </div>
               </div>
 

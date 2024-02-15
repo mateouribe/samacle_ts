@@ -179,6 +179,15 @@ const Contact = () => {
                 </ATag>
               </li>
               <li className="socialMediaItem wordsParent">
+                <ATag
+                  href="tel:=15488812390"
+                  colorHover="#9E9E9E"
+                  className="socialMediaItem"
+                >
+                  +1 (548) 881-2390
+                </ATag>
+              </li>
+              <li className="socialMediaItem wordsParent">
                 <ATag href="/" colorHover="#9E9E9E" className="socialMediaItem">
                   Waterloo, ON, Canada.
                 </ATag>

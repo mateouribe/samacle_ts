@@ -74,7 +74,9 @@ const Desktop = ({ title, text, bgColor, backToWhite, className }: Props) => {
       data-color={bgColor}
     >
       <div className="flex flex-col gap-5">
-        <h3 className="font-medium text-black text-subtitleTablet">{title}</h3>
+        <h3 className="font-medium text-black text-[40px] leading-[99%] mb-20">
+          {title}
+        </h3>
         <p className="text-black">{text}</p>
       </div>
       <Button navigateTo="/contact-us" blackColor>

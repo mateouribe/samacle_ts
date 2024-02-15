@@ -11,7 +11,6 @@ import Navbar from "./components/global/navbar";
 import Footer from "./components/global/footer";
 import AnimatedCursor from "react-animated-cursor";
 import { useStatesContext } from "./context/StatesProvider";
-// import { AnimatePresence } from "framer-motion";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -20,7 +19,6 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* <AnimatePresence mode="wait" initial={false}> */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/our-services" element={<Services />} />
@@ -29,7 +27,6 @@ const App: React.FC = () => {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
-      {/* </AnimatePresence> */}
       {isDesktop && (
         <AnimatedCursor
           innerSize={12}
