@@ -34,12 +34,12 @@ const Navbar = () => {
       desktopTl.current = gsap.timeline();
       const tl = desktopTl.current;
 
-      gsap.set(desktopContainer.current, {
-        y: -100,
+      gsap.set([".logo-menu", ".desktopItem"], {
+        top: -100,
       });
 
-      tl.to(desktopContainer.current, {
-        y: 0,
+      tl.to([".logo-menu", ".desktopItem"], {
+        top: 0,
         duration: 1,
         ease: Expo.easeInOut,
       });
@@ -237,7 +237,7 @@ const Navbar = () => {
         className="flex-row items-center justify-between hidden w-full lg:flex p-mobile md:px-tablet lg:px-desktop"
         ref={desktopContainer}
       >
-        <Link route="/" className="text-black">
+        <Link route="/" className="text-black link logo-menu">
           <img
             className=""
             src={icon}
@@ -245,7 +245,7 @@ const Navbar = () => {
             loading="lazy"
           />
         </Link>
-        <li className="flex justify-start gap-30">
+        <li className="flex justify-start gap-30 ">
           <ul className="flex w-full text-sm text-black gap-30">
             <Link route="/" className="desktopItem" image={homeSs}>
               {t("nav.home")}
@@ -272,14 +272,21 @@ const Navbar = () => {
             </Link>
           </ul>
           <div
-            className="text-black flex flex-col text-sm relative uppercase language-container z-[990]"
+            className="text-black flex flex-col text-sm relative uppercase language-container z-[990] desktopItem"
             onClick={onClickLanguage}
             onMouseDown={(e) => gsap.to(e.currentTarget, { scale: 0.8 })}
             onMouseUp={(e) => gsap.to(e.currentTarget, { scale: 1 })}
           >
-            <span className="text-black material-symbols-outlined hover:text-main">
+            {/* <span className="text-black material-symbols-outlined hover:text-main">
               language
-            </span>
+            </span> */}
+            <p className="text-[16px] leading-[20px]">
+              {currentLanguage === "en"
+                ? "🇺🇸"
+                : currentLanguage === "fr"
+                ? "🇫🇷"
+                : "🇪🇸"}
+            </p>
             <div className="bg-white absolute left-0 top-full min-w-max py-5 rounded-tl-[0px] border-[1px] border-gray language-options opacity-0 scale-0 z-[-10]">
               <ul>
                 <li

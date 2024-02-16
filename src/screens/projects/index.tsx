@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 import Item from "../../components/projects/item";
 import SplitType from "split-type";
 import { useLenis } from "@studio-freight/react-lenis";
+import PageTransition from "../../components/global/pageTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,40 +106,45 @@ const Projects = () => {
   }, []);
 
   return (
-    <main ref={container}>
-      <Helmet>
-        <title>{t("seo.projects.title")}</title>
-        <meta name="description" content={t("seo.projects.metaDescription")} />
-        <link rel="canonical" href="/our-projects" />
-      </Helmet>
-      <Section
-        hasPadding
-        className="flex flex-col py-desktop md:py-desktop gap-100"
-      >
-        <div className="flex items-center justify-between w-full">
-          <div>
-            <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
-              text={t("projects.welcomeMessage.one")}
-            ></SectionTitle>
-            <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
-              text={t("projects.welcomeMessage.two")}
-            ></SectionTitle>
-            <SectionTitle
-              className="text-black italic leading-[100%] projectsPageTitle wordsParent"
-              text={t("projects.welcomeMessage.three")}
-            ></SectionTitle>
+    <PageTransition>
+      <main ref={container}>
+        <Helmet>
+          <title>{t("seo.projects.title")}</title>
+          <meta
+            name="description"
+            content={t("seo.projects.metaDescription")}
+          />
+          <link rel="canonical" href="/our-projects" />
+        </Helmet>
+        <Section
+          hasPadding
+          className="flex flex-col py-desktop md:py-desktop gap-100"
+        >
+          <div className="flex items-center justify-between w-full">
+            <div>
+              <SectionTitle
+                className="text-black italic leading-[100%] projectsPageTitle wordsParent"
+                text={t("projects.welcomeMessage.one")}
+              ></SectionTitle>
+              <SectionTitle
+                className="text-black italic leading-[100%] projectsPageTitle wordsParent"
+                text={t("projects.welcomeMessage.two")}
+              ></SectionTitle>
+              <SectionTitle
+                className="text-black italic leading-[100%] projectsPageTitle wordsParent"
+                text={t("projects.welcomeMessage.three")}
+              ></SectionTitle>
+            </div>
+            <p className="w-[70%] md:w-[50%] lg:w-[30%] text-black projectPageText leading-[90%] wordsParent">
+              {t("projects.welcomeMessage.text")}
+            </p>
           </div>
-          <p className="w-[70%] md:w-[50%] lg:w-[30%] text-black projectPageText leading-[90%] wordsParent">
-            {t("projects.welcomeMessage.text")}
-          </p>
-        </div>
-        {projects.map((project, index) => (
-          <Item project={project} index={index} key={index} />
-        ))}
-      </Section>
-    </main>
+          {projects.map((project, index) => (
+            <Item project={project} index={index} key={index} />
+          ))}
+        </Section>
+      </main>
+    </PageTransition>
   );
 };
 

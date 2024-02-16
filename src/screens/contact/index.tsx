@@ -14,6 +14,7 @@ import Alert from "../../components/customElements/alert";
 import { useStatesContext } from "../../context/StatesProvider";
 import SplitType from "split-type";
 import { useLenis } from "@studio-freight/react-lenis";
+import PageTransition from "../../components/global/pageTransition";
 
 const Contact = () => {
   const container = useRef(null);
@@ -143,108 +144,114 @@ const Contact = () => {
   };
 
   return (
-    <main ref={container} className="relative">
-      <Helmet>
-        <title>{t("seo.contact.title")}</title>
-        <meta name="description" content={t("seo.contact.metaDescription")} />
-        <link rel="canonical" href="/contact-us" />
-      </Helmet>
-      <Section
-        hasPadding
-        className="flex min-h-[100vh] flex-col justify-between md:flex-row md:h-view gap-50 py-desktop contactContainer"
-      >
-        <div className="w-full md:w-[30%] md:h-full flex flex-row md:flex-col items-start justify-between">
-          <SectionTitle
-            className="text-black leading-[39px] contactTitle"
-            noMaxHeight
-            text={t("contact.welcomeMessage")}
-          ></SectionTitle>
+    <PageTransition>
+      <main ref={container} className="relative">
+        <Helmet>
+          <title>{t("seo.contact.title")}</title>
+          <meta name="description" content={t("seo.contact.metaDescription")} />
+          <link rel="canonical" href="/contact-us" />
+        </Helmet>
+        <Section
+          hasPadding
+          className="flex min-h-[100vh] flex-col justify-between md:flex-row md:h-view gap-50 py-desktop contactContainer"
+        >
+          <div className="w-full md:w-[30%] md:h-full flex flex-row md:flex-col items-start justify-between">
+            <SectionTitle
+              className="text-black leading-[39px] contactTitle"
+              noMaxHeight
+              text={t("contact.welcomeMessage")}
+            ></SectionTitle>
 
-          <div className="flex flex-col gap-20">
-            <ul className="text-black">
-              <li className="socialMediaItem wordsParent">
-                <ATag
-                  href="mailto:team@samacle.com"
-                  colorHover="#9E9E9E"
-                  className="socialMediaItem"
-                >
-                  team@samacle.com
-                </ATag>
-              </li>
-              <li className="socialMediaItem wordsParent">
-                <ATag
-                  href="tel:=14375186019"
-                  colorHover="#9E9E9E"
-                  className="socialMediaItem"
-                >
-                  +1 (437) 518-6019
-                </ATag>
-              </li>
-              <li className="socialMediaItem wordsParent">
-                <ATag
-                  href="tel:=14374730048"
-                  colorHover="#9E9E9E"
-                  className="socialMediaItem"
-                >
-                  +1 (437) 473-0048
-                </ATag>
-              </li>
-              <li className="socialMediaItem wordsParent">
-                <ATag href="/" colorHover="#9E9E9E" className="socialMediaItem">
-                  Waterloo, ON, Canada.
-                </ATag>
-              </li>
-            </ul>
-            <ul className="flex gap-5">
-              <SocialMedia color={colors.gray} bgColor="#ECECEC" />
-            </ul>
+            <div className="flex flex-col gap-20">
+              <ul className="text-black">
+                <li className="socialMediaItem wordsParent">
+                  <ATag
+                    href="mailto:team@samacle.com"
+                    colorHover="#9E9E9E"
+                    className="socialMediaItem"
+                  >
+                    team@samacle.com
+                  </ATag>
+                </li>
+                <li className="socialMediaItem wordsParent">
+                  <ATag
+                    href="tel:=14375186019"
+                    colorHover="#9E9E9E"
+                    className="socialMediaItem"
+                  >
+                    +1 (437) 518-6019
+                  </ATag>
+                </li>
+                <li className="socialMediaItem wordsParent">
+                  <ATag
+                    href="tel:=14374730048"
+                    colorHover="#9E9E9E"
+                    className="socialMediaItem"
+                  >
+                    +1 (437) 473-0048
+                  </ATag>
+                </li>
+                <li className="socialMediaItem wordsParent">
+                  <ATag
+                    href="/"
+                    colorHover="#9E9E9E"
+                    className="socialMediaItem"
+                  >
+                    Waterloo, ON, Canada.
+                  </ATag>
+                </li>
+              </ul>
+              <ul className="flex gap-5">
+                <SocialMedia color={colors.gray} bgColor="#ECECEC" />
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="w-full md:w-[60%] h-full flex flex-col justify-start items-center gap-30 frmContainer">
-          <h4 className="text-black text-text md:text-subtitleTablet">
-            {t("contact.formTitle")}
-          </h4>
-          <form
-            className="flex flex-col w-full gap-10"
-            onSubmit={sendEmail}
-            ref={form}
-          >
-            <Input
-              name="user_name"
-              type="text"
-              label="Name"
-              placeholder={t("contact.placeholder.name")}
-              required
-            />
-            <Input
-              name="user_email"
-              type="email"
-              label="Email"
-              placeholder={t("contact.placeholder.email")}
-              required
-            />
-            <Input
-              name="message"
-              type="text"
-              label="Message"
-              placeholder={t("contact.placeholder.message")}
-              textarea
-              required
-            />
-            <Button
-              className="mt-20"
-              type="submit"
-              icon="plane"
-              loading={isFormLoading}
+          <div className="w-full md:w-[60%] h-full flex flex-col justify-start items-center gap-30 frmContainer">
+            <h4 className="text-black text-text md:text-subtitleTablet">
+              {t("contact.formTitle")}
+            </h4>
+            <form
+              className="flex flex-col w-full gap-10"
+              onSubmit={sendEmail}
+              ref={form}
             >
-              {t("button.send")}
-            </Button>
-          </form>
-        </div>
-      </Section>
+              <Input
+                name="user_name"
+                type="text"
+                label="Name"
+                placeholder={t("contact.placeholder.name")}
+                required
+              />
+              <Input
+                name="user_email"
+                type="email"
+                label="Email"
+                placeholder={t("contact.placeholder.email")}
+                required
+              />
+              <Input
+                name="message"
+                type="text"
+                label="Message"
+                placeholder={t("contact.placeholder.message")}
+                textarea
+                required
+              />
+              <Button
+                className="mt-20"
+                type="submit"
+                icon="plane"
+                loading={isFormLoading}
+              >
+                {t("button.send")}
+              </Button>
+            </form>
+          </div>
+        </Section>
 
-      <Alert type={typeAlert} message={message} />
-    </main>
+        <Alert type={typeAlert} message={message} />
+      </main>
+    </PageTransition>
   );
 };
 

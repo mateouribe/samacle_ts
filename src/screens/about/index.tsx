@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet-async";
 import Image from "../../components/customElements/image";
 import team_working from "../../assets/images/team_working.png";
 import { useLenis } from "@studio-freight/react-lenis";
+import PageTransition from "../../components/global/pageTransition";
 
 const About = () => {
   const container = useRef(null);
@@ -56,26 +57,28 @@ const About = () => {
   }, []);
 
   return (
-    <main>
-      <Helmet>
-        <title>{t("seo.about.title")}</title>
-        <meta name="description" content={t("seo.about.metaDescription")} />
-        <link rel="canonical" href="/about-us" />
-      </Helmet>
-      <Hero />
-      <div
-        className="flex flex-col items-end w-full py-tablet px-mobile md:px-tablet lg:px-desktop gap-50"
-        ref={container}
-      >
-        <div className="w-[80%] md:w-[60%] h-[80vh] textTrigger">
-          <Image image={team_working} onLoad noHover />
+    <PageTransition>
+      <main>
+        <Helmet>
+          <title>{t("seo.about.title")}</title>
+          <meta name="description" content={t("seo.about.metaDescription")} />
+          <link rel="canonical" href="/about-us" />
+        </Helmet>
+        <Hero />
+        <div
+          className="flex flex-col items-end w-full py-tablet px-mobile md:px-tablet lg:px-desktop gap-50"
+          ref={container}
+        >
+          <div className="w-[80%] md:w-[60%] h-[80vh] textTrigger">
+            <Image image={team_working} onLoad noHover />
+          </div>
+          <p className="w-[70%] md:w-1/2 textAbout text-black dependsOnBgColor_text">
+            {t("home.ourMission")}
+          </p>
         </div>
-        <p className="w-[70%] md:w-1/2 textAbout text-black dependsOnBgColor_text">
-          {t("home.ourMission")}
-        </p>
-      </div>
-      <Process />
-    </main>
+        <Process />
+      </main>
+    </PageTransition>
   );
 };
 

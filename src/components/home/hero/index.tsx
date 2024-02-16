@@ -18,7 +18,7 @@ const Hero = () => {
     });
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({});
+      const tl = gsap.timeline();
 
       tl.fromTo(
         splitTitle.chars,

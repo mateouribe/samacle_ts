@@ -13,6 +13,7 @@ import Contact from "../../components/home/contact";
 import SectionTitle from "../../components/customElements/sectionTitle";
 import SplitType from "split-type";
 import { useLenis } from "@studio-freight/react-lenis";
+import PageTransition from "../../components/global/pageTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,26 +67,28 @@ const Home = () => {
   const text = t("home.whyUs.title");
 
   return (
-    <main ref={container}>
-      <Helmet>
-        <title>{t("seo.home.title")}</title>
-        <meta name="description" content={t("seo.home.metaDescription")} />
-        <link rel="canonical" href="/" />
-      </Helmet>
+    <PageTransition>
+      <main ref={container}>
+        <Helmet>
+          <title>{t("seo.home.title")}</title>
+          <meta name="description" content={t("seo.home.metaDescription")} />
+          <link rel="canonical" href="/" />
+        </Helmet>
 
-      <Hero />
-      <About />
-      <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet whyUsTrigger ">
-        <SectionTitle
-          className="text-black whyUs leading-[30px] font-medium"
-          text={text}
-        />
-      </div>
-      <WhyUs />
-      <Services />
-      <Projects />
-      <Contact />
-    </main>
+        <Hero />
+        <About />
+        <div className="px-mobile md:px-tablet lg:px-desktop pb-tablet whyUsTrigger ">
+          <SectionTitle
+            className="text-black whyUs leading-[30px] font-medium"
+            text={text}
+          />
+        </div>
+        <WhyUs />
+        <Services />
+        <Projects />
+        <Contact />
+      </main>
+    </PageTransition>
   );
 };
 
