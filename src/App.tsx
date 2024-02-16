@@ -16,7 +16,7 @@ import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 const App: React.FC = () => {
   const location = useLocation();
   const { isDesktop } = useStatesContext();
-  const lenis = useLenis(({ scroll }) => {
+  const lenis = useLenis(() => {
     // called every scroll
   });
 

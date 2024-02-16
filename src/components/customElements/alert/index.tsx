@@ -31,7 +31,7 @@ const Alert = ({ message = "", type }: Props) => {
         y: -95,
         duration: 1,
         ease: Expo.easeOut,
-        delay: 3,
+        delay: 5,
         onComplete: () => {
           setShowMessage(false);
           tl.current.time(0);

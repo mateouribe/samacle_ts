@@ -22,11 +22,14 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const { setShowMessage } = useStatesContext();
   const [typeAlert, setTypeAlert] = useState<"success" | "error">("success");
+  const [isFormLoading, setIsFormLoading] = useState(false);
+
   const form = useRef(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsFormLoading(true);
     if (form.current) {
       emailjs
         .sendForm(
@@ -37,11 +40,13 @@ const Contact = () => {
         )
         .then(
           () => {
+            setIsFormLoading(false);
             setMessage("We've got it from here! Mesage sent.");
             setShowMessage(true);
             setTypeAlert("success");
           },
           () => {
+            setIsFormLoading(false);
             setMessage("Something went wrong, please try again.");
             setShowMessage(true);
             setTypeAlert("error");
@@ -229,7 +234,12 @@ const Contact = () => {
               textarea
               required
             />
-            <Button className="mt-20" type="submit" icon="plane">
+            <Button
+              className="mt-20"
+              type="submit"
+              icon="plane"
+              loading={isFormLoading}
+            >
               {t("button.send")}
             </Button>
           </form>
