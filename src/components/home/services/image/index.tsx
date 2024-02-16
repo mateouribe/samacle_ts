@@ -5,7 +5,7 @@ type Props = {
 const Image = ({ image }: Props) => {
   return (
     <div
-      className="w-full h-full service-image"
+      className="w-full h-full service-image rounded-20"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",

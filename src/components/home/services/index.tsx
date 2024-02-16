@@ -142,19 +142,16 @@ const Services = () => {
 
   return (
     <div ref={container}>
-      <Section
-        hasPadding
-        className="flex flex-col gap-50 min-h-[100vh] sevices-bg-trigger"
-      >
+      <Section className="flex flex-col gap-50 min-h-[100vh] sevices-bg-trigger py-mobile md:py-tablet lg:py-desktop">
         <SectionTitle
-          className="servicesTitle text-beige leading-[30px] font-medium"
+          className="servicesTitle text-beige leading-[30px] font-medium  px-mobile md:px-tablet lg:px-desktop"
           text={t("home.services.title")}
         ></SectionTitle>
         <section className="relative flex flex-col services">
           <div className="w-full m-auto container-services">
             <div className="flex flex-col w-full h-full content-services">
               {/* header */}
-              <div className="w-full hidden lg:grid grid-cols-2 pb-10 border-b-[1px] border-white gap-20 ">
+              <div className="w-full hidden lg:grid grid-cols-2 pb-10 border-b-[1px] border-white gap-20  px-mobile md:px-tablet lg:px-desktop">
                 <div className="w-full h-full">
                   <span className="text-white text-xsm">
                     ({t("home.services.tableHeaderOne")})

@@ -44,6 +44,7 @@ export default {
       },
       borderRadius: {
         10: "10px",
+        20: "20px",
         button: "500px",
       },
     },

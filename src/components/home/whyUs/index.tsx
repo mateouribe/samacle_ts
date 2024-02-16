@@ -43,7 +43,7 @@ const WhyUse = () => {
 
   return (
     <div ref={container}>
-      <div className="relative flex w-full gallery justify-between">
+      <div className="relative flex justify-between w-full gallery">
         {/* Left side */}
         <div className="w-1/2 left outline-1">
           {/* Desktop content */}

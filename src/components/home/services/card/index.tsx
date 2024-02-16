@@ -12,7 +12,7 @@ const Card = ({ index }: Props) => {
 
   return (
     <div
-      className="item-service w-full grid gird-cols-1 md:grid-cols-2 border-b-[1px] border-white py-tablet gap-50 md:gap-20 lg:pl-tablet opacity-70 hover:opacity-100"
+      className="item-service w-full grid gird-cols-1 md:grid-cols-2 border-b-[1px] border-white py-tablet gap-50 md:gap-20 opacity-70 hover:opacity-100 px-mobile md:px-tablet lg:px-desktop"
       style={{
         transition: "0.5s",
       }}

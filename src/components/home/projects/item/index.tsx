@@ -59,7 +59,7 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
               : "#"
           }
         >
-          <div className="relative w-full h-full overflow-hidden">
+          <div className="relative w-full h-full overflow-hidden rounded-20">
             <Image
               image={project.image}
               position={{
