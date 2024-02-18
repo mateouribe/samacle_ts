@@ -61,8 +61,8 @@ const Image = ({
       if (!noHover) {
         tl.current = gsap.timeline({ paused: true });
 
-        tl.current.to(".containerScale", {
-          scale: 0.99,
+        tl.current.to(".coverImage", {
+          scale: 1.08,
           duration: 2,
           ease: Expo.easeOut,
         });

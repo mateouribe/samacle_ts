@@ -3,10 +3,8 @@ import { Expo, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 // import Transition from "../components/Transition";
 import Hero from "../../components/about/hero";
-import Process from "../../components/about/process";
 import { useTranslation } from "react-i18next";
 import { colors } from "../../utils/constants";
-// import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
 import Image from "../../components/customElements/image";
 import team_working from "../../assets/images/team_working.png";
@@ -76,7 +74,7 @@ const About = () => {
             {t("home.ourMission")}
           </p>
         </div>
-        <Process />
+        {/* <Process /> */}
       </main>
     </PageTransition>
   );

@@ -14,7 +14,7 @@ const SocialMedia = ({ color, bgColor }: Props) => {
           backgroundColor: bgColor,
         }}
       >
-        <a href="https://www.instagram.com/samacle.inc/?hl=es">
+        <a href="https://www.instagram.com/samacle.inc/?hl=es" target="_blank">
           <AiOutlineInstagram color={color} size={20} />
         </a>
       </li>
@@ -24,7 +24,7 @@ const SocialMedia = ({ color, bgColor }: Props) => {
           backgroundColor: bgColor,
         }}
       >
-        <a href="https://www.behance.net/samacle">
+        <a href="https://www.behance.net/samacle" target="_blank">
           <AiOutlineBehance color={color} size={20} />
         </a>
       </li>

@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslation } from "react-i18next";
 import blue from "../../../assets/images/blue.png";
 import orange from "../../../assets/images/orange.png";
-import pink from "../../../assets/images/pink.png";
+import pink from "../../../assets/images/pink.jpg";
 import purple from "../../../assets/images/purple.png";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,10 +103,10 @@ const WhyUse = () => {
           </div>
           {/* <!-- desktop content --> */}
           <div className="photos w-full h-[40vw] relative overflow-hidden">
-            <Photo image={blue} color="#94EFF9 #1BB7C8 #229AB2" />
-            <Photo image={orange} color="#FFE2C2 #FF9F35 #CF7A1B" />
-            <Photo image={pink} color="#FEB6CC #DF3866 #AA2147" />
-            <Photo image={purple} color="#D8BBFC #8952CB #4D21AA" />
+            <Photo image={blue} />
+            <Photo image={orange} backgroundPosition="left" />
+            <Photo image={pink} />
+            <Photo image={purple} />
           </div>
         </div>
       </div>

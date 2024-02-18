@@ -4,7 +4,7 @@ import { Expo, gsap } from "gsap";
 import { useTranslation } from "react-i18next";
 import SplitType from "split-type";
 import Image from "../../customElements/image";
-import homeHeroImage from "../../../assets/images/homeHeroImg.png";
+import homeHeroImage from "../../../assets/images/homeHeroImg.jpg";
 
 const Hero = () => {
   const container = useRef(null);
