@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { Expo, gsap } from "gsap";
+import { colors } from "../../../utils/constants";
 
 type Props = {
   href: string | undefined;
@@ -23,6 +24,9 @@ const ATag = ({
     const ctx = gsap.context(() => {
       gsap.set(".bottomLine", {
         scaleX: 0,
+      });
+      gsap.set(container.current, {
+        color: colors.black,
       });
       tl.current = gsap.timeline({ paused: true });
 
@@ -48,17 +52,17 @@ const ATag = ({
     <a
       href={href}
       onMouseEnter={() => {
-        tl.current.play();
+        colorHover && tl.current.play();
       }}
       onMouseLeave={() => {
-        tl.current.reverse();
+        colorHover && tl.current.reverse();
       }}
       onClick={onClick}
       ref={container}
-      className={`relative ${className}`}
+      className={`relative ${className} text-black`}
     >
       {children}
-      <div className="w-full h-[1.5px] bg-main absolute left-0 bottom-0 bottomLine origin-left" />
+      <div className="w-full h-[1px] bg-black absolute left-0 bottom-0 bottomLine origin-left" />
     </a>
   );
 };

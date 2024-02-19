@@ -14,7 +14,7 @@ const ScrollSection = ({ image, index, className }: Props) => {
 
   return (
     <div
-      className={`w-[100vw] h-view flex justify-center items-center ${
+      className={`w-[100vw] h-view flex justify-center items-center${
         className && className
       } p-tablet py-tablet ${index === 0 && "horizontalColor"}`}
       key={index}

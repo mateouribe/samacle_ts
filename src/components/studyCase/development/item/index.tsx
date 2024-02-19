@@ -20,8 +20,8 @@ const Item = ({ image, item, index }: Props) => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: container.current,
-        start: index === 0 ? "top 92.85%" : "top 130%",
-        end: index === 0 ? "bottom 92.85%" : "bottom 130%",
+        start: index === 0 ? "top 120%" : "top 120%",
+        end: index === 0 ? "bottom 120%" : "bottom 120%",
         animation: gsap.fromTo(
           ".itemText",
           {
@@ -59,12 +59,12 @@ const Item = ({ image, item, index }: Props) => {
           position={
             index === 0
               ? {
-                  start: "top 92.85%",
-                  end: "bottom 92.85%",
+                  start: "top 120%",
+                  end: "bottom 120%",
                 }
               : {
-                  start: "top 130%",
-                  end: "bottom 130%",
+                  start: "top 120%",
+                  end: "bottom 120%",
                 }
           }
           duration={2}

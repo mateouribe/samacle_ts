@@ -13,7 +13,6 @@ import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLenis } from "@studio-freight/react-lenis";
-import PageTransition from "../../components/global/pageTransition";
 
 const StudyCase = () => {
   const { link } = useParams();
@@ -68,35 +67,33 @@ const StudyCase = () => {
   }, [isLoaded]);
 
   return (
-    <PageTransition>
-      <main ref={container}>
-        <Helmet>
-          <title>Samacle - {t(`${item.current}.info.title`)}</title>
-          <meta
-            name="description"
-            content={`Samacle - ${t(`${item.current}.info.title`)}: ${t(
-              "seo.studyCases.metaDescription"
-            )}`}
-          />
-          {/* <link rel="canonical" href="/our-projects/study-case/" /> */}
-        </Helmet>
-        {isLoaded && (
-          <>
-            <Header project={item.current} />
-            <div className="w-full h-[80vh] imgTrigger">
-              <div className="relative w-full h-full projectMainImg">
-                <Image image={project?.studyCase.image} onLoad noHover />
-              </div>
+    <main ref={container}>
+      <Helmet>
+        <title>Samacle - {t(`${item.current}.info.title`)}</title>
+        <meta
+          name="description"
+          content={`Samacle - ${t(`${item.current}.info.title`)}: ${t(
+            "seo.studyCases.metaDescription"
+          )}`}
+        />
+        {/* <link rel="canonical" href="/our-projects/study-case/" /> */}
+      </Helmet>
+      {isLoaded && (
+        <>
+          <Header project={item.current} />
+          <div className="w-full h-[80vh] imgTrigger">
+            <div className="relative w-full h-full projectMainImg">
+              <Image image={project?.studyCase.image} onLoad noHover />
             </div>
-            <Context project={item.current} />
-            <Development project={project} item={item.current} />
-            <Design project={project} />
-            <DesignSystem project={project} />
-            <ClientsReview project={item.current} />
-          </>
-        )}
-      </main>
-    </PageTransition>
+          </div>
+          <Context project={item.current} />
+          <Development project={project} item={item.current} />
+          <Design project={project} />
+          <DesignSystem project={project} />
+          <ClientsReview project={item.current} />
+        </>
+      )}
+    </main>
   );
 };
 

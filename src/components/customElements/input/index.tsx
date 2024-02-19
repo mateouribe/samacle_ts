@@ -23,7 +23,7 @@ const Input = ({
       {textarea ? (
         <textarea
           name={name}
-          className="w-full md:w-[80%] border-none bg-lightGray text-gray placeholder:text-sm placeholder:text-gray px-20 py-10 min-h-[200px] max-h-[300px] md:max-h-[500px] overflow-scroll focus-visible:outline-none focus-visible:border-main focus-visible:border-[1px]"
+          className="w-full md:w-[80%] border-[0.1px] border-lightGray bg-lightGray text-gray placeholder:text-sm placeholder:text-gray px-20 py-10 min-h-[200px] max-h-[300px] md:max-h-[500px] overflow-scroll focus-visible:outline-none focus-visible:border-main focus-visible:border-[1px]"
           placeholder={placeholder}
           required={required}
         />
@@ -31,7 +31,7 @@ const Input = ({
         <input
           type={type}
           name={name}
-          className="w-full md:w-[80%] border-none bg-lightGray text-gray placeholder:text-sm placeholder:text-gray px-20 py-10 focus-visible:outline-none focus-visible:border-main focus-visible:border-[1px]"
+          className="w-full md:w-[80%] border-[0.1px] border-lightGray bg-lightGray text-gray placeholder:text-sm placeholder:text-gray px-20 py-10 focus-visible:outline-none focus-visible:border-main focus-visible:border-[1px]"
           placeholder={placeholder}
           required={required}
         />

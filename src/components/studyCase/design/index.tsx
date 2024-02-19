@@ -38,16 +38,16 @@ const Design = ({ project }: Props) => {
                   (project?.studyCase.figmaDesigns.length - 1)
                 : 0,
             ease: "none",
-            duration: 1,
+            // duration: 1,
             scrollTrigger: {
               trigger: triggerRef.current,
-              scrub: 0,
-              pin: true,
               start: "top top",
               end:
                 project?.studyCase.figmaDesigns !== undefined
                   ? `+=${project.studyCase.figmaDesigns.length - 1}00%`
                   : 0,
+              pin: true,
+              scrub: true,
             },
           }
         );

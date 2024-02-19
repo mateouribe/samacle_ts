@@ -23,58 +23,56 @@ const App: React.FC = () => {
 
   return (
     <>
-      <AnimatePresence mode="wait" initial={false}>
-        <Navbar />
-        <ReactLenis
-          root
-          options={{
-            smoothWheel: true,
-            duration: 2,
-          }}
-        >
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/our-services" element={<Services />} />
-            <Route path="/our-projects" element={<Projects />} />
-            <Route
-              path="/our-projects/study-case/:link"
-              element={<StudyCase />}
-            />
-            <Route path="/about-us" element={<About />} />
-            <Route path="/contact-us" element={<Contact />} />{" "}
-          </Routes>
-        </ReactLenis>
-
-        {isDesktop && (
-          <AnimatedCursor
-            innerSize={12}
-            outerSize={20}
-            color="58, 58, 58"
-            outerAlpha={0.2}
-            clickables={[
-              "a",
-              'input[type="text"]',
-              'input[type="email"]',
-              'input[type="number"]',
-              'input[type="submit"]',
-              'input[type="image"]',
-              "label[for]",
-              "select",
-              "textarea",
-              "button",
-              {
-                target: ".link",
-                color: "239, 78, 38",
-              },
-              {
-                target: ".link",
-                color: "239, 78, 38",
-              },
-            ]}
+      <Navbar />
+      <ReactLenis
+        root
+        options={{
+          smoothWheel: true,
+          duration: 2,
+        }}
+      >
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-services" element={<Services />} />
+          <Route path="/our-projects" element={<Projects />} />
+          <Route
+            path="/our-projects/study-case/:link"
+            element={<StudyCase />}
           />
-        )}
-        <Footer />
-      </AnimatePresence>
+          <Route path="/about-us" element={<About />} />
+          <Route path="/contact-us" element={<Contact />} />{" "}
+        </Routes>
+      </ReactLenis>
+
+      {isDesktop && (
+        <AnimatedCursor
+          innerSize={12}
+          outerSize={20}
+          color="58, 58, 58"
+          outerAlpha={0.2}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            {
+              target: ".link",
+              color: "239, 78, 38",
+            },
+            {
+              target: ".link",
+              color: "239, 78, 38",
+            },
+          ]}
+        />
+      )}
+      <Footer />
     </>
   );
 };

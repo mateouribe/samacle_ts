@@ -53,19 +53,19 @@
       "service1": {
         "title": "Web Design & Development",
         "subtitle": "UX/UI Design Services",
-        "shortDescription": "Your website is the face of your business in the digital world. Our talented team of designers and developers create visually stunning, user-friendly websites that leave a lasting impression on your audience. With a focus on responsive design and seamless functionality, we ensure your online presence stands out.",
+        "shortDescription": "We craft tailored websites using cutting-edge technology. From modern designs to seamless e-commerce solutions, we bring your online vision to life with precision and creativity.",
         "description": "Our Web Design and Development service is the cornerstone of crafting captivating digital identities for businesses across diverse industries. We don't just create websites; we engineer them to deliver results. Our team of skilled designers and developers collaborates closely with you to understand your vision and objectives, ensuring that every pixel and line of code serves a purpose. Whether you need a stunning website from scratch or want to revamp your existing online presence, our experts will turn your ideas into a visually striking, user-friendly, and high-performing digital platform that engages your audience and drives conversions"
       },
       "service2": {
         "title": "Marketing",
         "subtitle": "",
-        "shortDescription": "Leverage the power of email campaigns to nurture leads and maintain customer relationships. Our team of experts will help you create and execute email marketing strategies that drive conversions and increase revenue.",
+        "shortDescription": "Elevate your online presence with our expert social media management and targeted campaigns. We specialize in platforms like Instagram, Google Ads, and YouTube, helping you connect with your audience effectively.",
         "description": "In the vast digital landscape, visibility is key to success. Our Search Engine Optimization (SEO) service is designed to propel your brand to the forefront of search engine results, ensuring that potential customers find you before your competitors. With a deep understanding of search engine algorithms and the latest industry trends, our SEO experts employ proven strategies to optimize your website's ranking and enhance its online authority. We meticulously analyze keywords, optimize on-page elements, and build high-quality backlinks to boost your organic traffic and increase your online presence. With our SEO expertise, your business can gain the online visibility it deserves, driving more qualified traffic and ultimately, greater revenue."
       },
       "service3": {
         "title": "Branding",
         "subtitle": "",
-        "shortDescription": "Unlock the true potential of organic search traffic with our data-driven SEO strategies. We utilize the latest tools and industry insights to optimize your website's ranking on search engines, driving a steady stream of targeted traffic to your site.",
+        "shortDescription": "Remember that your brand is your identity. We'll help you shape it authentically through logo design, messaging, and visual elements, ensuring your uniqueness shines through in every aspect of your business.",
         "description": "Harness the power of personalized communication and engagement with our Email Marketing service. At our digital agency, we recognize that email remains one of the most effective tools for building relationships with your audience and driving conversions. Our experienced email marketers craft compelling, tailor-made campaigns that resonate with your target audience. We segment your email list to ensure the right message reaches the right people at the right time, increasing open rates and click-through rates. From eye-catching designs to persuasive copy, we ensure every email we send represents your brand's values and goals. With our Email Marketing service, you can nurture leads, retain customers, and achieve a significant return on investment while building lasting connections with your audience."
       }
     }

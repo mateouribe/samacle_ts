@@ -49,6 +49,7 @@ const Item = ({ project, alignLeft = false, isFirstOne = false }: Props) => {
         alignLeft ? "justify-start" : "justify-end"
       }`}
       ref={container}
+      key={project.id}
     >
       <figure className="w-[100%] md:w-[45%] h-[70vh] md:h-[80vh] flex flex-col gap-10">
         <Link

@@ -329,7 +329,7 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div
-        className="fixed flex lg:hidden w-full justify-between items-start p-mobile md:p-tablet z-[999999]"
+        className="fixed top-0 flex lg:hidden w-full justify-between items-start p-mobile md:p-tablet z-[999999]"
         ref={mobileContainer}
       >
         {/* Burger */}
