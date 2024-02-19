@@ -13,6 +13,7 @@ import AnimatedCursor from "react-animated-cursor";
 import { useStatesContext } from "./context/StatesProvider";
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { AnimatePresence } from "framer-motion";
+import NotFound from "./screens/notFound";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -40,7 +41,8 @@ const App: React.FC = () => {
             element={<StudyCase />}
           />
           <Route path="/about-us" element={<About />} />
-          <Route path="/contact-us" element={<Contact />} />{" "}
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </ReactLenis>
 
